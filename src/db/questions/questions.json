@@ -1,0 +1,88 @@
+{
+  "questions": [
+    {
+      "id": "1A",
+      "title": "¿Cómo buscas darle seguridad a tu dinero?",
+      "options": [
+        {
+          "id": "1A-1",
+          "option": "Lo pongo bajo el colchón",
+          "value": 1
+        },
+        {
+          "id": "1A-2",
+          "option": "Tengo una cuenta de ahorros en un banco",
+          "value": 2
+        },
+        {
+          "id": "1A-3",
+          "option": "No tengo dinero",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "2A",
+      "title": "Si alguna vez has invertido ¿En qué lo has hecho?",
+      "options": [
+        {
+          "id": "2A-1",
+          "option": "En acciones y fondos de inversión",
+          "value": 1
+        },
+        {
+          "id": "2A-2",
+          "option": "En oro y metales preciosos",
+          "value": 2
+        },
+        {
+          "id": "2A-3",
+          "option": "En criptomonedas",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "3A",
+      "title": "¿Alguna vez has ralizado una inversión?",
+      "options": [
+        {
+          "id": "3A-1",
+          "option": "Si, con lo ahorrado en un cochinito",
+          "value": 1
+        },
+        {
+          "id": "3A-2",
+          "option": "Si, participé en varias tandas",
+          "value": 2
+        },
+        {
+          "id": "3A-3",
+          "option": "No, tengo pavor a perder mi dinero",
+          "value": 2
+        }
+      ]
+    },
+    {
+      "id": "4A",
+      "title": "Al invertir, ¿a qué le temes?",
+      "options": [
+        {
+          "id": "4A-1",
+          "option": "A perderlo todo",
+          "value": 1
+        },
+        {
+          "id": "4A-2",
+          "option": "A no obtener los resultados previstos",
+          "value": 2
+        },
+        {
+          "id": "4A-3",
+          "option": "A no entenderle",
+          "value": 3
+        }
+      ]
+    }
+  ]
+}

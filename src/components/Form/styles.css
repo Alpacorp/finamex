@@ -1,0 +1,15 @@
+.form {
+  margin: 20px auto;
+}
+
+.form .container {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 50px;
+  margin: 80px;
+  justify-content: center;
+}
+
+.question-title {
+  margin-bottom: 10px;
+}
