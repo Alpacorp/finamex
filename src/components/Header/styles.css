@@ -1,4 +1,25 @@
-.container {
-  max-width: 1200px;
-  margin: 0 auto;
+.nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  transition: all 0.2s ease-in-out;
+  z-index: 3;
+}
+
+.nav .container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 0;
+}
+
+.nav a {
+  color: #fff;
+  text-decoration: none;
+  transition: all 0.2s ease-in-out;
+}
+
+.link-logo:hover {
+  color: #B2B2B2;
 }

@@ -1,16 +1,17 @@
 import "./styles.css";
+import "../../components/gc-styles.css";
 
 export const Header = () => {
   return (
     <header>
       <nav className="nav">
         <div className="container">
-          <a href="/">
-            <h1 className="logo">adiosalainverfobia</h1>
+          <a className="link-logo" href="/">
+            <h1 className="logo">
+              <span className="highlight">adios</span>inverfobia
+              <span className="highlight">.com</span>
+            </h1>
           </a>
-          <ul>
-            <li>home</li>
-          </ul>
         </div>
       </nav>
     </header>
