@@ -1,0 +1,19 @@
+.cta {
+  text-align: center;
+  margin: 50px auto;
+  font-weight: 600;
+}
+
+.cta a {
+  color: var(--blue-color);
+  text-decoration: none;
+  padding: 5px 20px;
+  border: 1px solid var(--white-color);
+  border-radius: 20px;
+  transition: all 0.2s ease-in-out;
+}
+
+.cta a:hover {
+  color: var(--white-color);
+  background-color: var(--dark-blue-color);
+}
