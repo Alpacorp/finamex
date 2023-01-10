@@ -4,6 +4,7 @@ import { Form } from "./components/Form";
 import { Header } from "./components/Header";
 import { Hero } from "./components/Hero";
 import { Info } from "./components/Info/info";
+import { Responses } from "./components/Responses";
 
 export const App = () => {
   return (
@@ -13,6 +14,7 @@ export const App = () => {
       <Info />
       <Cta />
       <Form />
+      <Responses />
     </div>
   );
 };

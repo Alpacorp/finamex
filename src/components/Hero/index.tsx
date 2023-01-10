@@ -6,7 +6,7 @@ export const Hero = () => {
     <section className="hero">
       <div className="container">
         <div className="main-message">
-          <h3 className="highlight">adiós</h3>
+          <h3 className="highlight">adiós 👋</h3>
           <h1>inverfobia</h1>
         </div>
       </div>
