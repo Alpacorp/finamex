@@ -22,3 +22,23 @@
   text-transform: uppercase;
   height: auto;
 }
+@media screen and (max-width: 550px) {
+  .main-message {
+    margin-bottom: 20px;
+  }
+  .main-message h3 {
+    font-size: 40px;
+  }
+  .main-message h1 {
+    font-size: 50px;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .main-message h3 {
+    font-size: 30px;
+  }
+  .main-message h1 {
+    font-size: 40px;
+  }
+}

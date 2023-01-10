@@ -14,6 +14,7 @@
   flex-direction: column;
   align-items: center;
   border-left: 3px solid var(--blue-color);
+  padding: 0 20px;
 }
 
 .info .container p {
@@ -25,3 +26,17 @@
   letter-spacing: 1px;
 }
 
+@media screen and (max-width: 560px) {
+  .content {
+    border: none;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .info .container {
+    padding: 0 20px;
+  }
+  .content {
+    padding: 0;
+  }
+}
