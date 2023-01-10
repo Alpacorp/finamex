@@ -2,7 +2,7 @@ import "./styles.css";
 import "../../components/gc-styles.css";
 import { questions } from "../../db/questions/questions.json";
 
-export interface FormProps {
+export interface QuestionProps {
   id?: string | undefined;
   title?: string;
   options?: OptionsProps[] | undefined;
@@ -17,34 +17,57 @@ export interface OptionsProps {
 }
 
 export const Form = () => {
-  console.log("questions", questions);
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+
+    const form: HTMLFormElement = e.target;
+    const data: FormData = new FormData(form);
+    const entries: IterableIterator<[string, FormDataEntryValue]> =
+      data.entries();
+    const obj: { [x: string]: FormDataEntryValue } =
+      Object.fromEntries(entries);
+    const values: FormDataEntryValue[] = Object.values(obj);
+
+    const sum: number = values.reduce(
+      (a: number, b: FormDataEntryValue | (FormDataEntryValue & {})): number =>
+        Number(a) + Number(b),
+      0
+    );
+    alert(`Tu puntaje es: ${sum}`);
+  };
 
   return (
     <section id="form" className="form">
-      <div className="container">
-        {questions.map((question: any) => {
-          return (
-            <div className="question-content" key={question.id}>
-              <h4 className="question-title">{question.title}</h4>
-              <div key={question.id}>
-                {question.options?.map((option: OptionsProps) => {
-                  return (
-                    <div className="question-options" key={option.id}>
-                      <input
-                        type="radio"
-                        id={option.id}
-                        name={question.id}
-                        value={option.value}
-                      />
-                      <label htmlFor={option.id}> {option.option}</label>
-                    </div>
-                  );
-                })}
+      <form onSubmit={handleSubmit}>
+        <div className="container">
+          {questions.map((question: QuestionProps) => {
+            return (
+              <div className="question-content" key={question.id}>
+                <h4 className="question-title">{question.title}</h4>
+                <div key={question.id}>
+                  {question.options?.map((option: OptionsProps) => {
+                    return (
+                      <div className="question-options" key={option.id}>
+                        <input
+                          type="radio"
+                          id={option.id}
+                          name={question.id}
+                          value={option.value}
+                          required
+                        />
+                        <label htmlFor={option.id}>{option.option}</label>
+                      </div>
+                    );
+                  })}
+                </div>
               </div>
-            </div>
-          );
-        })}
-      </div>
+            );
+          })}
+        </div>
+        <div className="button">
+          <button>Enviar</button>
+        </div>
+      </form>
     </section>
   );
 };

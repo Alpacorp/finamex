@@ -8,8 +8,43 @@
   grid-gap: 50px;
   margin: 80px;
   justify-content: center;
+  border-left: 3px solid var(--blue-color);
+}
+
+.form .container .button {
+  text-align: center;
 }
 
 .question-title {
   margin-bottom: 10px;
+}
+
+.question-options > * {
+  cursor: pointer;
+}
+
+.question-options label {
+  margin-left: 10px;
+}
+
+.button {
+  text-align: center;
+}
+
+.button button {
+  background-color: transparent;
+  cursor: pointer;
+  font-weight: 600;
+  max-width: 120px;
+  width: 100%;
+  color: var(--blue-color);
+  padding: 5px 20px;
+  border: 1px solid var(--white-color);
+  border-radius: 20px;
+  transition: all 0.2s ease-in-out;
+}
+
+.button button:hover {
+  color: var(--white-color);
+  background-color: var(--yellow-color);
 }
