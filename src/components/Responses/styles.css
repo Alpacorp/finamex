@@ -1,0 +1,48 @@
+.responses {
+  margin: 20px auto;
+  text-align: center;
+}
+
+.service a {
+  text-decoration: none;
+  color: var(--white-color);
+}
+.service {
+  padding: 20px;
+  transition: all 0.1s ease-in-out;
+}
+
+.service:hover {
+  transform: scale(1.1);
+  border: 1px solid var(--yellow-light-color);
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.active {
+  transform: scale(1.1);
+  border: 1px solid var(--yellow-light-color);
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.responses .container {
+  display: grid;
+  grid-template-columns: auto auto;
+  grid-gap: 50px;
+  margin: 80px;
+  justify-content: center;
+  border-left: 3px solid var(--blue-color);
+  padding: 0 200px;
+}
+
+.service .service-title {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.service .service-description {
+  color: var(--blue-color);
+  font-weight: bold;
+  font-size: 15px;
+}
