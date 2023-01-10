@@ -1,9 +1,11 @@
-.nav {
+.header {
   position: fixed;
   top: 0;
   left: 0;
   right: 0;
   transition: all 0.2s ease-in-out;
+  background-color: var(--dark-bg-color);
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   z-index: 3;
 }
 
@@ -11,7 +13,7 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 20px 0;
+  padding: 20px 50px;
 }
 
 .nav a {

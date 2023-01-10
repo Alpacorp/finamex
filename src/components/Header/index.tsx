@@ -3,7 +3,7 @@ import "../../components/gc-styles.css";
 
 export const Header = () => {
   return (
-    <header>
+    <header className="header">
       <nav className="nav">
         <div className="container">
           <a className="link-logo" href="/">
