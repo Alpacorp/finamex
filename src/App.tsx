@@ -1,4 +1,4 @@
-import { testApi } from "./api/contacts";
+import { postApi, testApi } from "./api/contacts";
 import "./App.css";
 import { Cta } from "./components/Cta/Cta";
 import { Form } from "./components/Form";
@@ -9,6 +9,7 @@ import { Responses } from "./components/Responses";
 
 export const App = () => {
   testApi();
+  postApi();
   return (
     <div>
       <Header />
