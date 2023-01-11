@@ -1,5 +1,6 @@
 import "./styles.css";
 import "../../components/gc-styles.css";
+import { PostContact } from "../../api/contacts";
 
 export const Info = () => {
   return (
@@ -32,6 +33,7 @@ export const Info = () => {
               específica para enfrentar sus síntomas.
             </p>
           </div>
+          <button onClick={PostContact}>hola</button>
         </div>
       </main>
     </section>
