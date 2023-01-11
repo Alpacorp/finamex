@@ -1,3 +1,4 @@
+import { testApi } from "./api/contacts";
 import "./App.css";
 import { Cta } from "./components/Cta/Cta";
 import { Form } from "./components/Form";
@@ -7,6 +8,7 @@ import { Info } from "./components/Info/info";
 import { Responses } from "./components/Responses";
 
 export const App = () => {
+  testApi();
   return (
     <div>
       <Header />

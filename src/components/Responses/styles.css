@@ -21,7 +21,6 @@
 
 .service {
   width: 100%;
-  /* padding: 10px; */
   transition: all 0.1s ease-in-out;
 }
 
@@ -72,9 +71,5 @@
   .responses .container {
     margin: 50px 0;
     gap: 30px;
-  }
-
-  .service {
-    /* padding: 10px; */
   }
 }
