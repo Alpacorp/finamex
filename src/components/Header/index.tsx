@@ -8,8 +8,8 @@ export const Header = () => {
         <div className="container">
           <a className="link-logo" href="/">
             <h1 className="logo">
-              <span className="highlight">adios</span>inverfobia
-              <span className="highlight">.com</span>
+              <span className="highlight-gray">adios</span>inverfobia
+              <span className="highlight-gray">.com</span>
             </h1>
           </a>
         </div>

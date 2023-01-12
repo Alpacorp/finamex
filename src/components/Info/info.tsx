@@ -33,7 +33,7 @@ export const Info = () => {
               específica para enfrentar sus síntomas.
             </p>
           </div>
-          <button onClick={PostContact}>hola</button>
+          {/* <button onClick={PostContact}>hola</button> */}
         </div>
       </main>
     </section>

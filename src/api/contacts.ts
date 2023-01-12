@@ -20,7 +20,7 @@ export const GetContact = async () => {
   //     console.log(error);
   //   });
   const hubspotClient = new Client({
-    accessToken: "pat-na1-e7836329-3ff5-4c02-a70e-ad4e00798f0b",
+    accessToken: "7d55dade-1a0d-4876-8d8d-58a159c696bd",
     basePath: "https://finamex.vercel.app/",
     defaultHeaders: {
       "Access-Control-Allow-Origin": "*",

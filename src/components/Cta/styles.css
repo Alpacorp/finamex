@@ -9,7 +9,7 @@
   text-decoration: none;
   padding: 5px 20px;
   border: 1px solid var(--white-color);
-  border-radius: 20px;
+  border-image: linear-gradient(180deg, rgba(14,16,255,1) 22%, rgba(71,219,248,1) 100%) 1;
   transition: all 0.2s ease-in-out;
 }
 

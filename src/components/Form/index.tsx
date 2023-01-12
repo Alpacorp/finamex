@@ -38,11 +38,6 @@ export const Form = () => {
 
   return (
     <section id="form" className="form">
-      <iframe
-        src="https://share.hsforms.com/1YoH-XQtdTeebxy_cAHtEGQbzd8"
-        height="700px"
-        width="100%"
-      ></iframe>
       <form onSubmit={handleSubmit}>
         <div className="container">
           {questions.map((question: QuestionProps) => {

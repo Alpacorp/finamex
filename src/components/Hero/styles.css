@@ -22,6 +22,7 @@
   text-transform: uppercase;
   height: auto;
 }
+
 @media screen and (max-width: 550px) {
   .main-message {
     margin-bottom: 20px;
