@@ -83,5 +83,9 @@
     margin: 30px 0;
     gap: 30px
   }
+
+  .form .form-title {
+    font-size: 14px;
+  }
 }
 

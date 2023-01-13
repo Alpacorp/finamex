@@ -15,10 +15,12 @@
   justify-content: space-between;
   align-items: center;
   padding: 20px 50px;
+  margin: auto;
 }
 
 .nav h1 {
   padding: 0 30px;
+  margin: auto;
 }
 
 .nav a {
@@ -33,4 +35,16 @@
 
 .link-logo:hover {
   color: var(--gray-light-color);
+}
+
+@media screen and (max-width: 400px) {
+  .nav .container {
+    display: flex;
+    justify-content: center;
+    padding: 10px 50px;
+  }
+
+  .nav h1 {
+    font-size: 20px;
+  }
 }
