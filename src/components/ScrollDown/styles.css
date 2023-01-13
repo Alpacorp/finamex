@@ -23,3 +23,15 @@
     margin-top: -100px;
   }
 }
+
+@media screen and (max-height: 850px) {
+  .scroll-down {
+    margin-top: -50px;
+  }
+}
+
+@media screen and (max-height: 600px) {
+  .scroll-down {
+    margin-top: -30px;
+  }
+}
