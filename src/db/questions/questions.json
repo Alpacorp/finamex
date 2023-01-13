@@ -83,6 +83,48 @@
           "value": 3
         }
       ]
+    },
+    {
+      "id": "5A",
+      "title": "Al invertir, ¿a qué le temes?",
+      "options": [
+        {
+          "id": "5A-1",
+          "option": "A perderlo todo",
+          "value": 1
+        },
+        {
+          "id": "5A-2",
+          "option": "A no obtener los resultados previstos",
+          "value": 2
+        },
+        {
+          "id": "5A-3",
+          "option": "A no entenderle",
+          "value": 3
+        }
+      ]
+    },
+    {
+      "id": "6A",
+      "title": "Al invertir, ¿a qué le temes?",
+      "options": [
+        {
+          "id": "6A-1",
+          "option": "A perderlo todo",
+          "value": 1
+        },
+        {
+          "id": "6A-2",
+          "option": "A no obtener los resultados previstos",
+          "value": 2
+        },
+        {
+          "id": "6A-3",
+          "option": "A no entenderle",
+          "value": 3
+        }
+      ]
     }
   ]
 }

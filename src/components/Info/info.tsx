@@ -26,11 +26,9 @@ export const Info = () => {
             </p>
             <p>
               <span className="highlight">
-                La buena noticia es que la Inverfobia tiene cura.
-              </span>{" "}
-              Completa el siguiente formulario y{" "}
-              <span className="highlight-yellow">descubre la solución</span>{" "}
-              específica para enfrentar sus síntomas.
+                La buena noticia es que la Inverfobia{" "}
+                <span className="highlight-yellow">tiene cura.</span>
+              </span>
             </p>
           </div>
           {/* <button onClick={PostContact}>hola</button> */}

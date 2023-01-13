@@ -69,8 +69,17 @@
 }
 
 @media screen and (max-width: 400px) {
+
   .responses .container {
     margin: 50px 0;
     gap: 30px;
+  }
+
+  .service .service-title {
+    font-size: 16px;
+  }
+
+  .service .service-description {
+    font-size: 12px;
   }
 }

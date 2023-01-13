@@ -38,6 +38,15 @@ export const Form = () => {
 
   return (
     <section id="form" className="form">
+      <div className="container title">
+        <div className="form-title">
+          <p>
+            Completa el siguiente formulario y{" "}
+            <span className="highlight-yellow">descubre la solución</span>{" "}
+            específica para enfrentar sus síntomas
+          </p>
+        </div>
+      </div>
       <form onSubmit={handleSubmit}>
         <div className="container">
           {questions.map((question: QuestionProps) => {

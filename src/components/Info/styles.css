@@ -1,6 +1,5 @@
 .info {
   text-align: center;
-  margin: 10px;
   font-weight: 600;
 }
 
@@ -13,9 +12,6 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  border-left: 3px solid var(--blue-color);
-  border-image: linear-gradient(180deg, rgba(14,16,255,1) 22%, rgba(71,219,248,1) 100%) 1;
-  padding: 0 20px;
 }
 
 .info .container p {
@@ -37,6 +33,11 @@
   .info .container {
     padding: 0 20px;
   }
+
+  .info .container p {
+    font-size: 13px;
+  }
+
   .content {
     padding: 0;
   }

@@ -1,9 +1,5 @@
 import "./styles.css";
 
-export const Cta = () => {
-  return (
-    <div className="cta">
-      <a href="#form">Haz tu diagnóstico</a>
-    </div>
-  );
+export const Cta = ({ children }: any) => {
+  return <div className="cta">{children}</div>;
 };
