@@ -1,4 +1,6 @@
 .cta {
+  position: sticky;
+  bottom: 0;
   text-align: center;
   margin: auto;
   font-weight: 600;

@@ -1,6 +1,6 @@
 .hero {
   margin: auto;
-  height: 100vh;
+  height: 90vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -75,9 +75,6 @@
 }
 
 @media screen and (max-height: 600px) {
-  .hero {
-    height: 100vh;
-  }
 
   .main-message h3 {
     font-size: 20px;
