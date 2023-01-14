@@ -57,10 +57,19 @@ export const Responses: FC = () => {
     }
   };
 
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: "smooth",
+    });
+  };
+
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
     }, 3000);
+
+    scrollToTop();
 
     validatePesos();
     validateFondos();
