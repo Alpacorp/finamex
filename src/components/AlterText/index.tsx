@@ -4,8 +4,8 @@ import "./styles.css";
 
 export const AlertText: FC = () => {
   return (
-    <>
-      <p className="alert-text">
+    <div className="alert-text">
+      <p>
         Este producto se adpata a tus necesidades,{" "}
         <strong className="highlight-yellow">toca o haz click</strong> para
         conocer más.
@@ -26,6 +26,6 @@ export const AlertText: FC = () => {
           />
         </svg>
       </div>
-    </>
+    </div>
   );
 };

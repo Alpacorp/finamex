@@ -8,7 +8,6 @@ interface CardResponseProps {
   description: string;
   active: boolean;
   link: string;
-  icon?: React.ReactNode;
   children: React.ReactNode;
 }
 
@@ -18,13 +17,11 @@ export const CardResponse: FC<CardResponseProps> = ({
   description,
   active,
   link,
-  icon,
 }) => {
   return (
     <div className={`service ${active ? "active" : ""}`}>
       <a href={link} target="_blank">
         <div className="service-icon">{children}</div>
-        <div>{icon}</div>
         <div>
           <h4 className="service-title">{title}</h4>
           <p className="service-description">{description}</p>

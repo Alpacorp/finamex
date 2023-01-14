@@ -9,9 +9,11 @@ import { Cta } from "../Cta/Cta";
 
 import "../../components/component-styles.css";
 import "./styles.css";
+import { Loading } from "../Loading";
 
 export const Responses: FC = () => {
   const [color, setColor] = useState<string>("");
+  const [loading, setLoading] = useState<boolean>(true);
   const [pesos, setPesos] = useState<boolean>(false);
   const [fondos, setFondos] = useState<boolean>(false);
   const [trading, setTrading] = useState<boolean>(false);
@@ -56,6 +58,10 @@ export const Responses: FC = () => {
   };
 
   useEffect(() => {
+    setTimeout(() => {
+      setLoading(false);
+    }, 3000);
+
     validatePesos();
     validateFondos();
     validateTrading();
@@ -64,6 +70,7 @@ export const Responses: FC = () => {
 
   return (
     <section className="responses">
+      <Loading open={loading} />
       <div className="container">
         <CardResponse
           active={pesos}

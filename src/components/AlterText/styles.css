@@ -3,12 +3,18 @@
   margin: 10px auto;
   max-width: 300px;
   width: 100%;
-  color: var(--white-color);
+}
+
+.alert-text p {
+  color: #fff;
+  font-weight: bold;
+  margin: 3px auto;
 }
 
 .link-icon {
   width: 20px;
   margin: auto;
+  margin-top: 5px;
   animation: pulse 2s infinite;
 }
 
