@@ -1,5 +1,11 @@
+import { FC } from "react";
+
 import "./styles.css";
 
-export const Cta = ({ children }: any) => {
+interface CtaProps {
+  children: React.ReactNode;
+}
+
+export const Cta: FC<CtaProps> = ({ children }) => {
   return <div className="cta">{children}</div>;
 };

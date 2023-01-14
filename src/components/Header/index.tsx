@@ -1,7 +1,9 @@
-import "./styles.css";
-import "../../components/gc-styles.css";
+import { FC } from "react";
 
-export const Header = () => {
+import "../../components/component-styles.css";
+import "./styles.css";
+
+export const Header: FC = () => {
   return (
     <header className="header">
       <nav className="nav">
@@ -12,6 +14,7 @@ export const Header = () => {
               <span className="highlight-gray">.com</span>
             </h1>
           </a>
+          <div className="bye">👋</div>
         </div>
       </nav>
     </header>

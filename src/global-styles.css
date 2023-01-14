@@ -1,0 +1,64 @@
+@font-face {
+  font-family: 'Cosi';
+  font-style: normal;
+  font-weight: 400;
+  src: url(./assets/fonts/cosi.woff2);
+}
+
+@font-face {
+  font-family: 'Neue';
+  src: url(./assets/fonts/neue-world.woff2);
+}
+
+@font-face {
+  font-family: 'Neue SemiBold';
+  src: url(./assets/fonts/TTFirsNeue-DemiBold.woff2);
+}
+
+@font-face {
+  font-family: 'Neue Bold Italic';
+  src: url(./assets/fonts/TTFirsNeue-DemiBoldItalic.woff2);
+}
+
+@font-face {
+  font-family: 'Neue Thin';
+  src: url(./assets/fonts/TTFirsNeue-Thin.woff2);
+}
+
+@font-face {
+  font-family: 'Neue Thin Italic';
+  src: url(./assets/fonts/TTFirsNeue-ThinItalic.woff2);
+}
+
+@font-face {
+  font-family: 'Neue Regular';
+  src: url(./assets/fonts/TTFirsNeue-Regular.woff2);
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  font-family: 'Neue thin';
+}
+
+html {
+  background-color: #061923;
+  color: #fff;
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+:root {
+  --white-color: #fff;
+  --blue-color: #07C4EF;
+  --dark-bg-color: #061923;
+  --dark-blue-color: #001D70;
+  --yellow-color: #F2822c;
+  --yellow-light-color: #FED560;
+  --gray-light-color: #dddbdb;
+  --primary-font: 'Neue Regular';
+  --secondary-font: 'Neue SemiBold';
+  --tertiary-font: 'Neue Bold Italic';
+  --quaternary-font: 'Neue Thin';
+  --quinary-font: 'Neue Thin Italic';
+}

@@ -1,0 +1,55 @@
+.service {
+  width: 100%;
+  transition: all 0.1s ease-in-out;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+}
+
+.service:hover {
+  transform: scale(1.01);
+  border: 1px solid var(--yellow-light-color);
+  cursor: pointer;
+}
+
+.service a {
+  text-decoration: none;
+  color: var(--white-color);
+  box-sizing: border-box;
+}
+
+.active {
+  transform: scale(1.02);
+  border: 1px solid var(--yellow-light-color);
+  border-radius: 20px;
+  cursor: pointer;
+  box-shadow: 0 0 3px var(--yellow-light-color);
+}
+
+.service .service-icon svg {
+  width: 100px;
+  height: 40px;
+  margin: auto;
+}
+
+.service .service-title {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.service .service-description {
+  color: var(--blue-color);
+  font-weight: bold;
+  font-size: 15px;
+}
+
+@media screen and (max-width: 400px) {
+  .service .service-title {
+    font-size: 16px;
+  }
+
+  .service .service-description {
+    font-size: 12px;
+  }
+}

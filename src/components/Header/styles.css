@@ -29,6 +29,10 @@
   transition: all 0.2s ease-in-out;
 }
 
+.nav .bye {
+  font-size: 25px;
+}
+
 .highlight-gray {
   color: var(--gray-light-color)
 }

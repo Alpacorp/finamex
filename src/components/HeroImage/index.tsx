@@ -1,7 +1,10 @@
+import { FC } from "react";
+
 import { saveMoney } from "../../assets/images";
+
 import "./styles.css";
 
-export const HeroImage = () => {
+export const HeroImage: FC = () => {
   return (
     <aside className="hero-image">
       <div className="container">

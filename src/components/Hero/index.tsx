@@ -1,10 +1,15 @@
-import { saveMoney } from "../../assets/images";
-import "../../components/gc-styles.css";
+import { FC } from "react";
+
 import { Info } from "../Info/info";
-import { ScrollDown } from "../ScrollDown";
+
+import "../../components/component-styles.css";
 import "./styles.css";
 
-export const Hero = ({ children }: any) => {
+interface HeroProps {
+  children: React.ReactNode;
+}
+
+export const Hero: FC<HeroProps> = ({ children }) => {
   return (
     <section className="hero">
       <aside>

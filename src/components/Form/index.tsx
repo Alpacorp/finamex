@@ -1,6 +1,13 @@
-import "./styles.css";
-import "../../components/gc-styles.css";
+import { FC, useContext } from "react";
+
+import ScoreContext from "../../context/ScoreContext";
+
 import { questions } from "../../db/questions/questions.json";
+
+import { Button } from "../Button";
+
+import "../../components/component-styles.css";
+import "./styles.css";
 
 export interface QuestionProps {
   id?: string | undefined;
@@ -16,7 +23,9 @@ export interface OptionsProps {
   value?: number;
 }
 
-export const Form = () => {
+export const Form: FC = () => {
+  const { setScore } = useContext(ScoreContext);
+
   const handleSubmit = (e: any) => {
     e.preventDefault();
 
@@ -33,7 +42,8 @@ export const Form = () => {
         Number(a) + Number(b),
       0
     );
-    alert(`Tu puntaje es: ${sum}`);
+
+    setScore(sum);
   };
 
   return (
@@ -73,9 +83,7 @@ export const Form = () => {
             );
           })}
         </div>
-        <div className="button">
-          <button>Enviar</button>
-        </div>
+        <Button type="button" text="Enviar" />
       </form>
     </section>
   );

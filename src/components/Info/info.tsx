@@ -1,8 +1,9 @@
-import "./styles.css";
-import "../../components/gc-styles.css";
-import { PostContact } from "../../api/contacts";
+import { FC } from "react";
 
-export const Info = () => {
+import "../../components/component-styles.css";
+import "./styles.css";
+
+export const Info: FC = () => {
   return (
     <section className="info">
       <main>
@@ -31,7 +32,6 @@ export const Info = () => {
               </span>
             </p>
           </div>
-          {/* <button onClick={PostContact}>hola</button> */}
         </div>
       </main>
     </section>
