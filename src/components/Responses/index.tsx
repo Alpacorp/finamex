@@ -110,13 +110,11 @@ export const Responses: FC = () => {
           <Home color={home ? color : ""} />
         </CardResponse>
       </div>
-      <Cta>
-        <Button
-          type="link"
-          link="https://www.finamex.com.mx/"
-          text="Más Información"
-        />
-      </Cta>
+      <Button
+        type="link"
+        link="https://www.finamex.com.mx/"
+        text="Más Información"
+      />
     </section>
   );
 };

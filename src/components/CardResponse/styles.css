@@ -45,6 +45,10 @@
 }
 
 @media screen and (max-width: 400px) {
+  .service {
+    padding: 0;
+  }
+
   .service .service-title {
     font-size: 16px;
   }
