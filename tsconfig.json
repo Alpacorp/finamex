@@ -20,9 +20,12 @@
   "references": [{ "path": "./tsconfig.node.json" }],
   "paths": {
     "@/*": ["src/*"],
+    "@src/*": ["src/*"],
     "@components/*": ["src/components/*"],
     "@db/*": ["src/db/*"],
     "@assets/*": ["src/assets/*"],
-    "@api/*": ["src/api/*"]
+    "@api/*": ["src/api/*"],
+    "@pages/*": ["src/pages/*"],
+    "@context/*": ["src/context/*"],
   }
 }
