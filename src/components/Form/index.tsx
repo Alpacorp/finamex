@@ -1,4 +1,5 @@
-import { FC, useContext } from "react";
+import { FC, useContext, useState } from "react";
+import ReCaptcha from "react-google-recaptcha";
 
 import ScoreContext from "../../context/ScoreContext";
 
@@ -8,6 +9,8 @@ import { Button } from "../Button";
 
 import "../../components/component-styles.css";
 import "./styles.css";
+import { useForm } from "../../hooks/useForm";
+import { apiCreateContact } from "../../apis/createContact";
 
 export interface QuestionProps {
   id?: string | undefined;
@@ -25,25 +28,83 @@ export interface OptionsProps {
 
 export const Form: FC = () => {
   const { setScore } = useContext(ScoreContext);
+  const [recaptcha, setRecaptcha] = useState(false);
+
+  const [formValues, handleInputChange, reset] = useForm({
+    firstname: "",
+    lastname: "",
+    phone: "",
+    email: "",
+  });
+
+  const { firstname, lastname, phone, email } = formValues;
+
+  const sumarValoresRadio = () => {
+    const radios: NodeListOf<HTMLInputElement> = document.querySelectorAll(
+      "input[type='radio']"
+    );
+    let total: number = 0;
+    for (var i = 0; i < radios.length; i++) {
+      if (radios[i].checked) {
+        total += parseInt(radios[i].value);
+      }
+    }
+    setScore(total);
+  };
+
+  const handleInputChangeCaptcha = (value: any) => {
+    setRecaptcha(value);
+  };
+
+  const handleCaptcha = (e: any) => {
+    e.preventDefault();
+    // Se verifica la respuesta enviando una petición al servidor de Google
+    fetch("https://www.google.com/recaptcha/api/siteverify", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/x-www-form-urlencoded",
+        "Access-Control-Allow-Origin": "*", // Required for CORS support to work
+        "Access-Control-Allow-Credentials": "true", // Required for cookies, authorization headers with HTTPS
+        mode: "no-cors",
+      },
+      body: `secret=6Ldo8QIkAAAAADkzwhOjuXoDm_Qz3jAXefpK9dVL&response=${recaptcha}`,
+    })
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.success) {
+          // procesar formulario
+          console.log("ok captcha");
+          handleSubmit(e);
+        } else {
+          // mostrar mensaje de error
+          console.log("error captcha");
+        }
+      });
+  };
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
-
-    const form: HTMLFormElement = e.target;
-    const data: FormData = new FormData(form);
-    const entries: IterableIterator<[string, FormDataEntryValue]> =
-      data.entries();
-    const obj: { [x: string]: FormDataEntryValue } =
-      Object.fromEntries(entries);
-    const values: FormDataEntryValue[] = Object.values(obj);
-
-    const sum: number = values.reduce(
-      (a: number, b: FormDataEntryValue | (FormDataEntryValue & {})): number =>
-        Number(a) + Number(b),
-      0
-    );
-
-    setScore(sum);
+    sumarValoresRadio();
+    apiCreateContact
+      .post("/hubspot/contact", formValues, {
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+      .then((res) => {
+        res.status === 200 &&
+          res.data.message.code === 409 &&
+          alert(
+            `Hola ${firstname}, tu usuario ya se registró, sin embargo, con este nuevo registro actualizaremos tus datos. ¡Muchas gracias! A continuación, te mostramos tu resultado ✅.`
+          );
+        res.status === 200 &&
+          !res.data.message.code &&
+          alert(
+            `hola ${firstname} ${lastname}, tu registro fue exitoso. A continuación, te mostramos tu resultado ✅.`
+          );
+        console.log("res", res);
+      });
+    reset();
   };
 
   return (
@@ -57,8 +118,8 @@ export const Form: FC = () => {
           </p>
         </div>
       </div>
-      <form onSubmit={handleSubmit}>
-        <div className="container">
+      <form onSubmit={handleCaptcha}>
+        <div className="container alejo">
           {questions.map((question: QuestionProps) => {
             return (
               <div className="question-content" key={question.id}>
@@ -82,6 +143,67 @@ export const Form: FC = () => {
               </div>
             );
           })}
+        </div>
+        <div className="form-title">
+          <p>
+            Registra tus datos para{" "}
+            <span className="highlight-yellow">mostrar tu resultado</span>
+          </p>
+        </div>
+        <div className="container data">
+          <input
+            className="input"
+            type="text"
+            name="firstname"
+            id="firstname"
+            placeholder="Digita tus nombres"
+            onChange={handleInputChange}
+            value={firstname}
+            required
+          />
+          <input
+            className="input"
+            type="text"
+            name="lastname"
+            id="lastname"
+            placeholder="Digita tus apellidos"
+            onChange={handleInputChange}
+            value={lastname}
+            required
+          />
+          <input
+            className="input"
+            type="number"
+            name="phone"
+            id="phone"
+            onChange={handleInputChange}
+            placeholder="Digita tu teléfono"
+            value={phone}
+            required
+          />
+          <input
+            className="input"
+            type="email"
+            name="email"
+            id="email"
+            onChange={handleInputChange}
+            value={email}
+            placeholder="Digita tu correo electrónico"
+            required
+          />
+          <div className="terms">
+            <input type="checkbox" name="terms" id="terms" required />
+            <label htmlFor="terms">
+              Acepta la{" "}
+              <a href="" target="_blank">
+                política de privacidad
+              </a>
+            </label>
+          </div>
+          <ReCaptcha
+            sitekey="6Ldo8QIkAAAAAFctZkm9sLaNxDJZEa6WPy3RcjNb"
+            onChange={handleInputChangeCaptcha}
+          />
         </div>
         <Button type="button" text="Enviar" />
       </form>

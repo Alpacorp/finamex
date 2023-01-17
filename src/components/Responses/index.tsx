@@ -5,7 +5,6 @@ import ScoreContext from "../../context/ScoreContext";
 import { Fondos, Home, Pesos, Trading } from "../../assets/icons/";
 import { CardResponse } from "../CardResponse";
 import { Button } from "../Button";
-import { Cta } from "../Cta/Cta";
 
 import "../../components/component-styles.css";
 import "./styles.css";
@@ -117,7 +116,7 @@ export const Responses: FC = () => {
             "Para tus necesidades de crecimiento, tu opción es Finamex Patrimonial"
           }
           description={
-            "Contruye una estrategia personal con la ayuda de nuestros expertos"
+            "Construye una estrategia personal con la ayuda de nuestros expertos"
           }
           link={
             "https://www.finamex.com.mx/inversiones/estrategia-patrimonial/"
