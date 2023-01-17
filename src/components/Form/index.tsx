@@ -73,7 +73,7 @@ export const Form: FC = () => {
           message["error-codes"][0] === "invalid-input-response"
         ) {
           alert(
-            `${firstname} por favor verifica ✅ el código captcha para continuar,`
+            `${firstname} por favor verifica ✅ el código captcha para continuar.`
           );
         }
       })
