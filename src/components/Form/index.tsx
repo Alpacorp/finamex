@@ -64,16 +64,23 @@ export const Form: FC = () => {
   const handleSubmit = (e: any) => {
     e.preventDefault();
     // Se verifica la respuesta enviando una petición al servidor de Google
-    fetch("https://www.google.com/recaptcha/api/siteverify", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/x-www-form-urlencoded",
-        "Access-Control-Allow-Origin": "*", // Required for CORS support to work
-        "Access-Control-Allow-Credentials": "true", // Required for cookies, authorization headers with HTTPS
-        mode: "no-cors",
-      },
-      body: `secret=6LdBcgMkAAAAAMRX4TJ0qq4NpoV3lTGVM24w3-gL&response=${recaptcha}`,
-    })
+
+    // send recaptcha response to url params to verify
+
+    fetch(
+      "https://www.google.com/recaptcha/api/siteverify?secret=6LdBcgMkAAAAAMRX4TJ0qq4NpoV3lTGVM24w3-gL&response=" +
+        recaptcha,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+          // "Access-Control-Allow-Origin": "*", // Required for CORS support to work
+          // "Access-Control-Allow-Credentials": "true", // Required for cookies, authorization headers with HTTPS
+          // mode: "no-cors",
+        },
+        // body: `secret=6LdBcgMkAAAAAMRX4TJ0qq4NpoV3lTGVM24w3-gL&response=${recaptcha}`,
+      }
+    )
       .then((response) => response.json())
       .then((data) => {
         if (data.success) {
