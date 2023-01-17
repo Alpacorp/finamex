@@ -125,5 +125,9 @@ input::placeholder {
   .form .form-title {
     font-size: 14px;
   }
+
+  .container .input {
+    width: 80%;
+  }
 }
 
