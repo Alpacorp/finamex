@@ -118,7 +118,7 @@ export const Form: FC = () => {
           </p>
         </div>
       </div>
-      <form onSubmit={handleCaptcha}>
+      <form onSubmit={handleSubmit}>
         <div className="container alejo">
           {questions.map((question: QuestionProps) => {
             return (
@@ -200,10 +200,6 @@ export const Form: FC = () => {
               </a>
             </label>
           </div>
-          <ReCaptcha
-            sitekey="6Ldo8QIkAAAAAFctZkm9sLaNxDJZEa6WPy3RcjNb"
-            onChange={handleInputChangeCaptcha}
-          />
         </div>
         <Button type="button" text="Enviar" />
       </form>
