@@ -85,11 +85,11 @@ export const Form: FC = () => {
       .then((data) => {
         if (data.success) {
           // procesar formulario
-          console.log("ok captcha");
-          handleSubmit(e);
+          console.log("ok captcha", data);
+          handleCreateContact(e);
         } else {
           // mostrar mensaje de error
-          console.log("error captcha");
+          console.log("error captcha", data);
         }
       });
   };
