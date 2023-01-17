@@ -29,7 +29,8 @@ export interface OptionsProps {
 export const Form: FC = () => {
   const { setScore } = useContext(ScoreContext);
   const [recaptcha, setRecaptcha] = useState<string>("");
-  const recaptchaRef = useRef<any>(null);
+  const recaptchaRef: React.MutableRefObject<any> = useRef<any>(null);
+  const secret: string = import.meta.env.VITE_SECRET_CAPTCHA;
 
   const [formValues, handleInputChange, reset] = useForm({
     firstname: "",
@@ -56,47 +57,10 @@ export const Form: FC = () => {
   const handleChangeCaptcha = (value: any) => {
     const recaptchaValue = recaptchaRef.current.getValue();
     setRecaptcha(recaptchaValue);
-    console.log("recaptchaValueRef", recaptchaValue);
-  };
-
-  console.log("recaptcha", recaptcha);
-
-  const handleSubmit = (e: any) => {
-    e.preventDefault();
-    // Se verifica la respuesta enviando una petición al servidor de Google
-
-    // send recaptcha response to url params to verify
-
-    fetch(
-      "https://www.google.com/recaptcha/api/siteverify?secret=6LdBcgMkAAAAAMRX4TJ0qq4NpoV3lTGVM24w3-gL&response=" +
-        recaptcha,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-          // "Access-Control-Allow-Origin": "*", // Required for CORS support to work
-          // "Access-Control-Allow-Credentials": "true", // Required for cookies, authorization headers with HTTPS
-          // mode: "no-cors",
-        },
-        // body: `secret=6LdBcgMkAAAAAMRX4TJ0qq4NpoV3lTGVM24w3-gL&response=${recaptcha}`,
-      }
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        if (data.success) {
-          // procesar formulario
-          console.log("ok captcha", data);
-          handleCreateContact(e);
-        } else {
-          // mostrar mensaje de error
-          console.log("error captcha", data);
-        }
-      });
   };
 
   const handleCreateContact = (e: any) => {
     e.preventDefault();
-    sumarValoresRadio();
     apiCreateContact
       .post("/hubspot/contact", formValues, {
         headers: {
@@ -107,7 +71,7 @@ export const Form: FC = () => {
         res.status === 200 &&
           res.data.message.code === 409 &&
           alert(
-            `Hola ${firstname}, tu usuario ya se registró, sin embargo, con este nuevo registro actualizaremos tus datos. ¡Muchas gracias! A continuación, te mostramos tu resultado ✅.`
+            `Hola ${firstname}, tu correo ya está en nuestras bases de datos, sin embargo, con este nuevo registro actualizaremos la información. ¡Muchas gracias! A continuación, te mostramos tu resultado ✅.`
           );
         res.status === 200 &&
           !res.data.message.code &&
@@ -115,8 +79,49 @@ export const Form: FC = () => {
             `hola ${firstname} ${lastname}, tu registro fue exitoso. A continuación, te mostramos tu resultado ✅.`
           );
         console.log("res", res);
+      })
+      .catch((err) => {
+        console.log("err", err);
+        alert(
+          `${firstname}, tuvimos un error en el registro ❌ por favor intenta nuevamente o hazlo más tarde.`
+        );
+        window.location.href = "/";
       });
+    sumarValoresRadio();
     reset();
+  };
+
+  const verifyCapcha = (e: any) => {
+    fetch(
+      `https://www.google.com/recaptcha/api/siteverify?secret=${secret}&response=${recaptcha}`,
+      {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/x-www-form-urlencoded",
+        },
+      }
+    )
+      .then((response) => response.json())
+      .then((data) => {
+        if (data.success) {
+          console.log("ok captcha", data);
+          handleCreateContact(e);
+        } else if (
+          !data.success &&
+          data["error-codes"][0] === "invalid-input-response"
+        ) {
+          alert(
+            `${firstname} por favor verifica ✅ el código captcha para continuar,`
+          );
+        } else {
+          console.log("error captcha", data);
+        }
+      });
+  };
+
+  const handleSubmit = (e: any) => {
+    e.preventDefault();
+    verifyCapcha(e);
   };
 
   return (
