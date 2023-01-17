@@ -23,12 +23,69 @@
   border-image: linear-gradient(180deg, rgba(14,16,255,1) 22%, rgba(71,219,248,1) 100%) 1;
 }
 
+.input {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border-radius: 20px;
+}
+
+input::placeholder {
+  color: #000;
+  font-weight: bold;
+}
+
+.container.data {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 0 20px;
+}
+
+.container .input {
+  border: none;
+  max-width: 500px;
+  width: 100%;
+  border-bottom: 2px solid var(--blue-color);
+  padding: 10px;
+  border-radius: 10px;
+  outline: none;
+  color: #000;
+  font-weight: bold;
+}
+
 .form .container .button {
   text-align: center;
 }
 
+.form .terms label {
+  margin-left: 5px;
+}
+
+.form .terms a {
+  color: var(--blue-color);
+  text-decoration: none;
+}
+
+.form .terms a:hover {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+.question-content {
+  box-sizing: border-box;
+}
+
 .question-title {
   margin-bottom: 10px;
+}
+
+.question-options {
+  padding: 2px 0;
+  box-sizing: content-box;
 }
 
 .question-options > * {
@@ -37,6 +94,10 @@
 
 .question-options label {
   margin-left: 10px;
+}
+
+.question-options:hover > label {
+  color: var(--blue-color);
 }
 
 @media screen and (max-width: 980px) {
