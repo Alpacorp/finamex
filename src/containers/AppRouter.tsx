@@ -6,7 +6,7 @@ import { App } from "../pages/App";
 
 export const AppRouter: FC = () => {
   const maintenance = import.meta.env.VITE_MAINTENANCE || "false";
-  const mode = import.meta.env.MODE || "production";
+  const mode = import.meta.env.VITE_MODE || "production";
   const apiUrlDev =
     import.meta.env.VITE_API_URL_DEV || "http://localhost:5000/api/form";
   const apiUrlProd =

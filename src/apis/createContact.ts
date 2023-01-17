@@ -1,10 +1,10 @@
 import axios from "axios";
 
-let baseURL = import.meta.env.VITE_API_URL_LOCAL;
+let baseURL = "";
 
-if (import.meta.env.MODE === "production") {
+if (import.meta.env.VITE_MODE === "production") {
   baseURL = import.meta.env.VITE_API_URL_PROD;
-} else if (import.meta.env.MODE === "development") {
+} else if (import.meta.env.VITE_MODE === "development") {
   baseURL = import.meta.env.VITE_API_URL_DEV;
 }
 
