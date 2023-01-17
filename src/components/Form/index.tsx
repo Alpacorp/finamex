@@ -2,15 +2,15 @@ import { FC, useContext, useRef, useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 
 import ScoreContext from "../../context/ScoreContext";
+import { apiCreateContact } from "../../apis/createContact";
 
 import { questions } from "../../db/questions/questions.json";
+import { useForm } from "../../hooks/useForm";
 
 import { Button } from "../Button";
 
 import "../../components/component-styles.css";
 import "./styles.css";
-import { useForm } from "../../hooks/useForm";
-import { apiCreateContact } from "../../apis/createContact";
 
 export interface QuestionProps {
   id?: string | undefined;
@@ -28,9 +28,10 @@ export interface OptionsProps {
 
 export const Form: FC = () => {
   const { setScore } = useContext(ScoreContext);
-  const [recaptcha, setRecaptcha] = useState<string>("");
-  const recaptchaRef: React.MutableRefObject<any> = useRef<any>(null);
-  const secret: string = import.meta.env.VITE_SECRET_CAPTCHA;
+  const [captchaStatus, setCaptchaStatus] = useState(false);
+  const recaptchaRef: React.MutableRefObject<ReCAPTCHA | undefined> = useRef<
+    ReCAPTCHA | undefined
+  >();
 
   const [formValues, handleInputChange, reset] = useForm({
     firstname: "",
@@ -54,9 +55,35 @@ export const Form: FC = () => {
     setScore(total);
   };
 
-  const handleChangeCaptcha = (value: any) => {
-    const recaptchaValue = recaptchaRef.current.getValue();
-    setRecaptcha(recaptchaValue);
+  const handleChangeCaptcha = (e: any) => {
+    const recaptchaValue = recaptchaRef?.current?.getValue();
+
+    apiCreateContact
+      .post("/captcha", {
+        token: recaptchaValue,
+        headers: {
+          "Content-Type": "application/json",
+        },
+      })
+      .then(({ data: { message } }) => {
+        if (message.success) {
+          setCaptchaStatus(true);
+        } else if (
+          !message.success &&
+          message["error-codes"][0] === "invalid-input-response"
+        ) {
+          alert(
+            `${firstname} por favor verifica ✅ el código captcha para continuar,`
+          );
+        }
+      })
+      .catch((err) => {
+        console.log("err", err);
+        alert(
+          `${firstname}, tuvimos un error en el registro ❌ por favor intenta nuevamente o hazlo más tarde.`
+        );
+        window.location.href = "/";
+      });
   };
 
   const handleCreateContact = (e: any) => {
@@ -78,7 +105,6 @@ export const Form: FC = () => {
           alert(
             `hola ${firstname} ${lastname}, tu registro fue exitoso. A continuación, te mostramos tu resultado ✅.`
           );
-        console.log("res", res);
       })
       .catch((err) => {
         console.log("err", err);
@@ -91,37 +117,10 @@ export const Form: FC = () => {
     reset();
   };
 
-  const verifyCapcha = (e: any) => {
-    fetch(
-      `https://www.google.com/recaptcha/api/siteverify?secret=${secret}&response=${recaptcha}`,
-      {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/x-www-form-urlencoded",
-        },
-      }
-    )
-      .then((response) => response.json())
-      .then((data) => {
-        if (data.success) {
-          console.log("ok captcha", data);
-          handleCreateContact(e);
-        } else if (
-          !data.success &&
-          data["error-codes"][0] === "invalid-input-response"
-        ) {
-          alert(
-            `${firstname} por favor verifica ✅ el código captcha para continuar,`
-          );
-        } else {
-          console.log("error captcha", data);
-        }
-      });
-  };
-
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    verifyCapcha(e);
+    handleChangeCaptcha(e);
+    captchaStatus && handleCreateContact(e);
   };
 
   return (
@@ -220,7 +219,7 @@ export const Form: FC = () => {
           <ReCAPTCHA
             sitekey="6LdBcgMkAAAAAG1guFqtvgKW1lOgdFI4QzpJ8TlC"
             onChange={handleChangeCaptcha}
-            ref={recaptchaRef}
+            ref={recaptchaRef as any}
             size="normal"
           />
         </div>
