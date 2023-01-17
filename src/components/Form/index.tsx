@@ -1,5 +1,5 @@
-import { FC, useContext, useState } from "react";
-import ReCaptcha from "react-google-recaptcha";
+import { FC, useContext, useRef, useState } from "react";
+import ReCAPTCHA from "react-google-recaptcha";
 
 import ScoreContext from "../../context/ScoreContext";
 
@@ -28,7 +28,8 @@ export interface OptionsProps {
 
 export const Form: FC = () => {
   const { setScore } = useContext(ScoreContext);
-  const [recaptcha, setRecaptcha] = useState(false);
+  const [recaptcha, setRecaptcha] = useState<string>("");
+  const recaptchaRef = useRef<any>(null);
 
   const [formValues, handleInputChange, reset] = useForm({
     firstname: "",
@@ -52,11 +53,15 @@ export const Form: FC = () => {
     setScore(total);
   };
 
-  const handleInputChangeCaptcha = (value: any) => {
-    setRecaptcha(value);
+  const handleChangeCaptcha = (value: any) => {
+    const recaptchaValue = recaptchaRef.current.getValue();
+    setRecaptcha(recaptchaValue);
+    console.log("recaptchaValueRef", recaptchaValue);
   };
 
-  const handleCaptcha = (e: any) => {
+  console.log("recaptcha", recaptcha);
+
+  const handleSubmit = (e: any) => {
     e.preventDefault();
     // Se verifica la respuesta enviando una petición al servidor de Google
     fetch("https://www.google.com/recaptcha/api/siteverify", {
@@ -67,7 +72,7 @@ export const Form: FC = () => {
         "Access-Control-Allow-Credentials": "true", // Required for cookies, authorization headers with HTTPS
         mode: "no-cors",
       },
-      body: `secret=6Ldo8QIkAAAAADkzwhOjuXoDm_Qz3jAXefpK9dVL&response=${recaptcha}`,
+      body: `secret=6LdBcgMkAAAAAMRX4TJ0qq4NpoV3lTGVM24w3-gL&response=${recaptcha}`,
     })
       .then((response) => response.json())
       .then((data) => {
@@ -82,7 +87,7 @@ export const Form: FC = () => {
       });
   };
 
-  const handleSubmit = (e: any) => {
+  const handleCreateContact = (e: any) => {
     e.preventDefault();
     sumarValoresRadio();
     apiCreateContact
@@ -200,6 +205,12 @@ export const Form: FC = () => {
               </a>
             </label>
           </div>
+          <ReCAPTCHA
+            sitekey="6LdBcgMkAAAAAG1guFqtvgKW1lOgdFI4QzpJ8TlC"
+            onChange={handleChangeCaptcha}
+            ref={recaptchaRef}
+            size="normal"
+          />
         </div>
         <Button type="button" text="Enviar" />
       </form>
