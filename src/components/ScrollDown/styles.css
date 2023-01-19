@@ -1,8 +1,19 @@
 .scroll-down {
-  width: 30px;
   text-align: center;
   margin: auto;
   animation: scroll-down 2s infinite;
+}
+
+.scroll-down strong {
+  font-size: 17px;
+  color: var(--blue-light-color);
+  margin-bottom: 10px;
+}
+
+.scroll-down svg {
+  width: 30px;
+  height: 30px;
+  color: var(--blue-color);
 }
 
 @keyframes scroll-down {

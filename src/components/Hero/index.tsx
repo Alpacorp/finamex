@@ -15,10 +15,10 @@ export const Hero: FC<HeroProps> = ({ children }) => {
       <aside>
         <div className="container">
           <div className="main-message">
-            <h3 className="highlight">
-              adiós <span className="wave">👋</span>
-            </h3>
-            <h1>inverfobia</h1>
+            <h1>
+              adiós <br />
+              inverfobia
+            </h1>
             <Info />
           </div>
           <div>{children}</div>

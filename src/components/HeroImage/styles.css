@@ -4,6 +4,8 @@
   max-width: 600px;
   object-fit: cover;
   box-shadow: 0 0 7px 0 rgba(255, 255, 255, 0.5);
+  max-width: 500px;
+  width: 100%;
 }
 
 @media screen and (max-width: 950px) {

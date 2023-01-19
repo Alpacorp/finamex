@@ -9,6 +9,7 @@ import { Button } from "../Button";
 import "../../components/component-styles.css";
 import "./styles.css";
 import { Loading } from "../Loading";
+import { Cta } from "../Cta/Cta";
 
 export const Responses: FC = () => {
   const [color, setColor] = useState<string>("");
@@ -23,7 +24,6 @@ export const Responses: FC = () => {
   const validatePesos = () => {
     if (score >= 1 && score <= 7) {
       setPesos(true);
-      setColor("#F9A826");
     } else {
       setPesos(false);
     }
@@ -32,7 +32,6 @@ export const Responses: FC = () => {
   const validateFondos = () => {
     if (score >= 8 && score <= 11) {
       setFondos(true);
-      setColor("#A2E68A");
     } else {
       setFondos(false);
     }
@@ -41,7 +40,6 @@ export const Responses: FC = () => {
   const validateTrading = () => {
     if (score >= 12 && score <= 15) {
       setTrading(true);
-      setColor("#46D7FB");
     } else {
       setTrading(false);
     }
@@ -50,7 +48,6 @@ export const Responses: FC = () => {
   const validateHome = () => {
     if (score >= 16) {
       setHome(true);
-      setColor("#8FA4E3");
     } else {
       setHome(false);
     }
@@ -82,53 +79,55 @@ export const Responses: FC = () => {
       <div className="container">
         <CardResponse
           active={pesos}
-          title={"Tu alternativa de inversión es Finamex +Pesos"}
+          subtitle={"Tu cura contra la inverfobia es"}
+          title={"Finamex +Pesos"}
           description={
-            "Elige el plazo que más le convenga a lo que inviertas, teniendo siempre el control"
+            "Invierte desde $100 y despídete dela inverfobia tomando el control de tu dinero."
           }
           link={"https://www.finamex.com.mx/general/mas-pesos"}
         >
-          <Pesos color={pesos ? color : ""} />
+          <Pesos color={"#F9A826"} />
         </CardResponse>
         <CardResponse
           active={fondos}
-          title={"El producto ideal para ti es Finamex Fondos"}
+          subtitle={"Tu tratamiento ideal es"}
+          title={"Finamex Fondos"}
           description={
-            "Pasa al siguiente nivel adquiriendo más de 30 Fondos de Inversión de Finamex y varias reconocidas instituciones"
+            "Cura la inverfobia con más de 30 fondos en una estrategia que tu mismo puedes crear en nuestra app."
           }
           link={"https://www.finamex.com.mx/general/fondos"}
         >
-          <Fondos color={fondos ? color : ""} />
+          <Fondos color={"#A2E68A"} />
         </CardResponse>
         <CardResponse
           active={trading}
-          title={"La solución que buscas es Finamex Trading"}
+          subtitle={"La solución indicada para ti es"}
+          title={"Finamex Trading"}
           description={
-            "Opera de manera fácil y segura en los mercados internacionales más importantes"
+            "La inverfobia se va cuando te vuelves dueño de acciones en los mercado más importantes."
           }
           link={"https://www.finamex.com.mx/general/finamex-trading/"}
         >
-          <Trading color={trading ? color : ""} />
+          <Trading color={"#46D7FB"} />
         </CardResponse>
         <CardResponse
           active={home}
-          title={
-            "Para tus necesidades de crecimiento, tu opción es Finamex Patrimonial"
-          }
+          subtitle={"Alíviate de la inverfobia con"}
+          title={"Finamex Patrimonial"}
           description={
-            "Construye una estrategia personal con la ayuda de nuestros expertos"
+            "Nuestros expertos analizan lo mejor para ti y te ofrecen las soluciones para olvidarte de la inverfobia para siempre."
           }
           link={
             "https://www.finamex.com.mx/inversiones/estrategia-patrimonial/"
           }
         >
-          <Home color={home ? color : ""} />
+          <Home color={"#8FA4E3"} />
         </CardResponse>
       </div>
       <Button
         type="link"
         link="https://www.finamex.com.mx/"
-        text="Más Información"
+        text="Conoce más de Finamex"
       />
     </section>
   );

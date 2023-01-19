@@ -8,9 +8,8 @@
 }
 
 .service:hover {
-  transform: scale(1.01);
-  border: 1px solid var(--yellow-light-color);
-  cursor: pointer;
+  opacity: 1;
+  box-shadow: 0 0 10px var(--yellow-light-color);
 }
 
 .service a {
@@ -20,17 +19,27 @@
 }
 
 .active {
-  transform: scale(1.02);
   border: 1px solid var(--yellow-light-color);
   border-radius: 20px;
   cursor: pointer;
   box-shadow: 0 0 3px var(--yellow-light-color);
 }
 
+.disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  pointer-events: none;
+}
+
 .service .service-icon svg {
   width: 100px;
   height: 40px;
   margin: auto;
+}
+
+.service .service-subtitle {
+  font-size: 18px;
+  font-weight: lighter;
 }
 
 .service .service-title {

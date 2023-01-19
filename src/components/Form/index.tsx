@@ -135,7 +135,7 @@ export const Form: FC = () => {
         </div>
       </div>
       <form onSubmit={handleSubmit}>
-        <div className="container alejo">
+        <div className="container">
           {questions.map((question: QuestionProps) => {
             return (
               <div className="question-content" key={question.id}>

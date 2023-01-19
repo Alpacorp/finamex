@@ -31,7 +31,7 @@
 }
 
 input::placeholder {
-  color: #000;
+  color: var(--black-color);
   font-weight: bold;
 }
 
@@ -42,7 +42,6 @@ input::placeholder {
   align-items: center;
   flex-wrap: wrap;
   gap: 20px;
-  padding: 0 20px;
 }
 
 .container .input {
@@ -52,8 +51,7 @@ input::placeholder {
   border-bottom: 2px solid var(--blue-color);
   padding: 10px;
   border-radius: 10px;
-  outline: none;
-  color: #000;
+  color: var(--black-color);
   font-weight: bold;
 }
 
@@ -109,6 +107,7 @@ input::placeholder {
 @media screen and (max-width: 560px) {
   .form .container {
     border: none;
+    padding-left: 0;
   }
 }
 @media screen and (max-width: 400px) {

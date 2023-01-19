@@ -7,7 +7,7 @@ import "./styles.css";
 export const HeroImage: FC = () => {
   return (
     <aside className="hero-image">
-      <div className="container">
+      <div>
         <img className="image" src={saveMoney} alt="Save money" />
       </div>
     </aside>

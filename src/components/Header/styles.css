@@ -18,9 +18,18 @@
   margin: auto;
 }
 
-.nav h1 {
+.nav h2 {
   padding: 0 30px;
   margin: auto;
+  font-family: 'Neue Extended Regular';
+  font-weight: 500;
+  font-size: 30px;
+}
+
+.nav span {
+  font-family: 'Neue Extended Regular';
+  font-weight: 500;
+  font-size: 30px;
 }
 
 .nav a {
@@ -48,7 +57,7 @@
     padding: 10px 50px;
   }
 
-  .nav h1 {
+  .nav h2, .nav span {
     font-size: 20px;
   }
 }
