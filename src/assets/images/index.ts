@@ -1,3 +1,3 @@
-import saveMoney from "./save-money.jpg";
+import saveMoney from "./inverfobia-image.png";
 
 export { saveMoney };
