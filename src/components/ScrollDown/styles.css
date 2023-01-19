@@ -5,7 +5,8 @@
 }
 
 .scroll-down strong {
-  font-size: 17px;
+  font-size: 13px;
+  font-weight: 500;
   color: var(--blue-light-color);
   margin-bottom: 10px;
 }
