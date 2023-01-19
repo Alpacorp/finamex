@@ -35,6 +35,11 @@
   src: url(./assets/fonts/TTFirsNeue-Regular.woff2);
 }
 
+@font-face {
+  font-family: 'Neue Extended Regular';
+  src: url(./assets/fonts/NeueWorld-ExtendedRegular.woff2);
+}
+
 * {
   padding: 0;
   margin: 0;
@@ -50,7 +55,9 @@ html {
 
 :root {
   --white-color: #fff;
+  --black-color: #000;
   --blue-color: #07C4EF;
+  --blue-light-color: #84cedf;
   --dark-bg-color: #061923;
   --dark-blue-color: #001D70;
   --yellow-color: #F2822c;
