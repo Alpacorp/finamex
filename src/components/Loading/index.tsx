@@ -10,8 +10,7 @@ export const Loading: FC<LoadingProps> = ({ open }) => {
     <>
       {open && (
         <div className="loading">
-          <div className="loading__spinner" />
-          <div className="wave">👋</div>
+          <div className="loading-spinner" />
           <div>
             <h2>
               Estamos validando la información para indicarte la mejor solución
