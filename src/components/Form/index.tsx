@@ -6,6 +6,7 @@ import { apiCreateContact } from "../../apis/createContact";
 
 import { questions } from "../../db/questions/questions.json";
 import { useForm } from "../../hooks/useForm";
+import { sumRadioValues, capitalize } from "../../utils/";
 
 import { Button } from "../Button";
 
@@ -41,21 +42,9 @@ export const Form: FC = () => {
   });
 
   const { firstname, lastname, phone, email } = formValues;
+  const { total } = sumRadioValues();
 
-  const sumarValoresRadio = () => {
-    const radios: NodeListOf<HTMLInputElement> = document.querySelectorAll(
-      "input[type='radio']"
-    );
-    let total: number = 0;
-    for (var i = 0; i < radios.length; i++) {
-      if (radios[i].checked) {
-        total += parseInt(radios[i].value);
-      }
-    }
-    setScore(total);
-  };
-
-  const handleChangeCaptcha = (e: any) => {
+  const handleChangeCaptcha = () => {
     const recaptchaValue = recaptchaRef?.current?.getValue();
 
     apiCreateContact
@@ -98,12 +87,12 @@ export const Form: FC = () => {
         res.status === 200 &&
           res.data.message.code === 409 &&
           alert(
-            `Hola ${firstname}, tu correo ya está en nuestras bases de datos, sin embargo, con este nuevo registro actualizaremos la información. ¡Muchas gracias! A continuación, te mostramos tu resultado ✅.`
+            `Hola ${firstname}, tu correo ya está en nuestras bases de datos, sin embargo, con este nuevo registro actualizaremos la información. ¡Muchas gracias! A continuación, te mostramos tu resultado ✅`
           );
         res.status === 200 &&
           !res.data.message.code &&
           alert(
-            `hola ${firstname} ${lastname}, tu registro fue exitoso. A continuación, te mostramos tu resultado ✅.`
+            `hola ${firstname} ${lastname}, tu registro fue exitoso. A continuación, te mostramos tu resultado ✅`
           );
       })
       .catch((err) => {
@@ -113,13 +102,14 @@ export const Form: FC = () => {
         );
         window.location.href = "/";
       });
-    sumarValoresRadio();
+    sumRadioValues();
+    setScore(total);
     reset();
   };
 
   const handleSubmit = (e: any) => {
     e.preventDefault();
-    handleChangeCaptcha(e);
+    handleChangeCaptcha();
     captchaStatus && handleCreateContact(e);
   };
 
@@ -174,7 +164,7 @@ export const Form: FC = () => {
             id="firstname"
             placeholder="Digita tus nombres"
             onChange={handleInputChange}
-            value={firstname}
+            value={capitalize(firstname)}
             required
           />
           <input
@@ -184,7 +174,7 @@ export const Form: FC = () => {
             id="lastname"
             placeholder="Digita tus apellidos"
             onChange={handleInputChange}
-            value={lastname}
+            value={capitalize(lastname)}
             required
           />
           <input

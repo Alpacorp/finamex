@@ -48,7 +48,7 @@
 
 html {
   background-color: #061923;
-  color: #fff;
+  color: var(--white-color);
   box-sizing: border-box;
   scroll-behavior: smooth;
 }
@@ -57,7 +57,7 @@ html {
   --white-color: #fff;
   --black-color: #000;
   --blue-color: #07C4EF;
-  --blue-light-color: #84cedf;
+  --blue-light-color: #bae2eb;
   --dark-bg-color: #061923;
   --dark-blue-color: #001D70;
   --yellow-color: #F2822c;
@@ -68,4 +68,5 @@ html {
   --tertiary-font: 'Neue Bold Italic';
   --quaternary-font: 'Neue Thin';
   --quinary-font: 'Neue Thin Italic';
+  --senary-font: 'Neue Extended Regular';
 }

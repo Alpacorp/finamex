@@ -16,13 +16,8 @@
   transition: all 0.5s ease-in-out;
 }
 
-.loading .wave {
-  font-size: 50px;
-  margin: 10px;
-}
-
 .loading h2 {
-  color: #fff;
+  color: var(--white-color);
   font-size: 15px;
   width: 200px;
   text-align: center;

@@ -5,14 +5,12 @@ import ScoreContext from "../../context/ScoreContext";
 import { Fondos, Home, Pesos, Trading } from "../../assets/icons/";
 import { CardResponse } from "../CardResponse";
 import { Button } from "../Button";
+import { Loading } from "../Loading";
 
 import "../../components/component-styles.css";
 import "./styles.css";
-import { Loading } from "../Loading";
-import { Cta } from "../Cta/Cta";
 
 export const Responses: FC = () => {
-  const [color, setColor] = useState<string>("");
   const [loading, setLoading] = useState<boolean>(true);
   const [pesos, setPesos] = useState<boolean>(false);
   const [fondos, setFondos] = useState<boolean>(false);
@@ -66,7 +64,6 @@ export const Responses: FC = () => {
     }, 3000);
 
     scrollToTop();
-
     validatePesos();
     validateFondos();
     validateTrading();
