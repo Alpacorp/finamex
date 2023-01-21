@@ -77,10 +77,8 @@ export const Form: FC = () => {
       });
   };
 
-  const handleCreateContact = (e: any) => {
+  const handleCreateContact = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("formValues", formValues);
-
     apiCreateContact
       .post("/hubspot/contact", formValues, {
         headers: {
@@ -111,7 +109,7 @@ export const Form: FC = () => {
     reset();
   };
 
-  const handleSubmit = (e: any) => {
+  const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     handleChangeCaptcha();
     captchaStatus && handleCreateContact(e);
