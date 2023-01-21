@@ -39,6 +39,8 @@ export const Form: FC = () => {
     lastname: "",
     phone: "",
     email: "",
+    website: "https://inverfobia.com",
+    company: "Inverfobia",
   });
 
   const { firstname, lastname, phone, email } = formValues;
@@ -77,6 +79,8 @@ export const Form: FC = () => {
 
   const handleCreateContact = (e: any) => {
     e.preventDefault();
+    console.log("formValues", formValues);
+
     apiCreateContact
       .post("/hubspot/contact", formValues, {
         headers: {
@@ -92,7 +96,7 @@ export const Form: FC = () => {
         res.status === 200 &&
           !res.data.message.code &&
           alert(
-            `hola ${firstname} ${lastname}, tu registro fue exitoso. A continuación, te mostramos tu resultado ✅`
+            `Hola ${firstname} ${lastname}, tu registro fue exitoso. A continuación, te mostramos tu resultado ✅`
           );
       })
       .catch((err) => {
