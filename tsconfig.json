@@ -27,5 +27,6 @@
     "@api/*": ["src/api/*"],
     "@pages/*": ["src/pages/*"],
     "@context/*": ["src/context/*"],
+    "@utils/*": ["src/utils/*"],
   }
 }
