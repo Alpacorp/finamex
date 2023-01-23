@@ -104,7 +104,6 @@ export const Form: FC = () => {
         );
         window.location.href = "/";
       });
-    sumRadioValues();
     setScore(total);
     reset();
   };
