@@ -208,7 +208,7 @@ export const Form: FC = () => {
             </label>
           </div>
           <ReCAPTCHA
-            sitekey="6LdBcgMkAAAAAG1guFqtvgKW1lOgdFI4QzpJ8TlC"
+            sitekey={import.meta.env.VITE_RECAPTCHA_SITE_KEY}
             onChange={handleChangeCaptcha}
             ref={recaptchaRef as any}
             size="normal"
