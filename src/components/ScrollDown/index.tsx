@@ -5,7 +5,9 @@ import "./styles.css";
 export const ScrollDown: FC = () => {
   return (
     <div className="scroll-down">
-      <strong>Desliza hacia abajo y empieza tu diagnóstico</strong>
+      <strong>
+        Desliza para hacer tu test y saber qué tipo de inverfobia tienes
+      </strong>
       <div title="Scroll down">
         <svg
           xmlns="http://www.w3.org/2000/svg"

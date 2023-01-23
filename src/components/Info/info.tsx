@@ -14,11 +14,9 @@ export const Info: FC = () => {
               ataca a millones de mexicanos.
             </p>
             <p>
-              No importa su estado financiero, género ni edad,{" "}
-              <strong>
-                sus síntomas están presentes en nuestro día a día{" "}
-              </strong>{" "}
-              y pueden manifestarse de múltiples formas.
+              <strong>Es un miedo a invertir que paraliza tu dinero</strong>
+              sin importar estado financiero, género ni edad, que está en
+              nuestro día a día y se manifiesta de múltiples formas.
             </p>
             <p>
               <strong className="highlight-yellow">
