@@ -4,21 +4,21 @@ import { AlertText } from "../AlterText";
 import "./styles.css";
 
 interface CardResponseProps {
+  active: boolean;
+  children: React.ReactNode;
+  description: string;
+  link: string;
   subtitle: string;
   title: string;
-  description: string;
-  active: boolean;
-  link: string;
-  children: React.ReactNode;
 }
 
 export const CardResponse: FC<CardResponseProps> = ({
+  active,
   children,
+  description,
+  link,
   subtitle,
   title,
-  description,
-  active,
-  link,
 }) => {
   return (
     <div className={`service ${active ? "active" : "disabled"}`}>

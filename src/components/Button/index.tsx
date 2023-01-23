@@ -3,9 +3,9 @@ import { FC } from "react";
 import "./styles.css";
 
 interface ButtonProps {
-  type: "button" | "link";
-  text: string;
   link?: string;
+  text: string;
+  type: "button" | "link";
 }
 
 export const Button: FC<ButtonProps> = ({ type, text, link }) => {

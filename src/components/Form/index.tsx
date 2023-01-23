@@ -28,7 +28,7 @@ export interface OptionsProps {
 }
 
 export const Form: FC = () => {
-  const { setScore } = useContext(ScoreContext);
+  const { setScore, detectedDevice } = useContext(ScoreContext);
   const [captchaStatus, setCaptchaStatus] = useState(false);
   const recaptchaRef: React.MutableRefObject<ReCAPTCHA | undefined> = useRef<
     ReCAPTCHA | undefined
@@ -74,7 +74,6 @@ export const Form: FC = () => {
         alert(
           `${firstname}, tuvimos un error en el registro ❌ por favor intenta nuevamente o hazlo más tarde.`
         );
-        window.location.href = "/";
       });
   };
 
@@ -103,7 +102,6 @@ export const Form: FC = () => {
         alert(
           `${firstname}, tuvimos un error en el registro ❌ por favor intenta nuevamente o hazlo más tarde.`
         );
-        window.location.href = "/";
       });
     setScore(total);
     reset();
@@ -212,7 +210,7 @@ export const Form: FC = () => {
             sitekey={siteKey}
             onChange={handleChangeCaptcha}
             ref={recaptchaRef as any}
-            size="normal"
+            size={detectedDevice === "mobile" ? "compact" : "normal"}
           />
         </div>
         <Button type="button" text="Enviar" />

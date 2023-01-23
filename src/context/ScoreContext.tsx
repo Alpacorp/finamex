@@ -3,6 +3,8 @@ import { createContext, useState } from "react";
 const ScoreContext = createContext({
   score: 0,
   setScore: (score: number) => {},
+  detectedDevice: "",
+  setDetectedDevice: (detectedDevice: string) => {},
 });
 
 interface ScoreProviderProps {
@@ -11,9 +13,12 @@ interface ScoreProviderProps {
 
 export const ScoreProvider = ({ children }: ScoreProviderProps) => {
   const [score, setScore] = useState(0);
-  console.log("score context", score);
+  const [detectedDevice, setDetectedDevice] = useState("");
+
   return (
-    <ScoreContext.Provider value={{ score, setScore }}>
+    <ScoreContext.Provider
+      value={{ score, setScore, detectedDevice, setDetectedDevice }}
+    >
       {children}
     </ScoreContext.Provider>
   );

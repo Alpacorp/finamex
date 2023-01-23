@@ -72,7 +72,11 @@ export const Responses: FC = () => {
 
   return (
     <section className="responses">
-      <Loading open={loading} />
+      <Loading
+        open={loading}
+        text="Estamos validando la información para indicarte la mejor solución
+              a la Inverfobia"
+      />
       <div className="container">
         <CardResponse
           active={pesos}

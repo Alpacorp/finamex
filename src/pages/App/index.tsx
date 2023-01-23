@@ -1,4 +1,4 @@
-import { FC, useContext } from "react";
+import { FC, useContext, useEffect } from "react";
 
 import ScoreContext from "../../context/ScoreContext";
 
@@ -10,9 +10,14 @@ import { HeroImage } from "../../components/HeroImage";
 import { ScrollDown } from "../../components/ScrollDown/index";
 
 import "../../global-styles.css";
+import { typeDevice } from "../../utils/typeDevice";
 
 export const App: FC = () => {
-  const { score } = useContext(ScoreContext);
+  const { score, setDetectedDevice } = useContext(ScoreContext);
+
+  useEffect(() => {
+    setDetectedDevice(typeDevice());
+  }, []);
 
   return (
     <>

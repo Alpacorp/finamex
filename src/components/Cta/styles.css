@@ -1,21 +1,21 @@
 .cta {
-  position: sticky;
   bottom: 0;
-  text-align: center;
-  margin: auto;
   font-weight: 600;
+  margin: auto;
+  position: sticky;
+  text-align: center;
 }
 
 .cta a {
-  color: var(--blue-color);
-  text-decoration: none;
-  padding: 5px 20px;
-  border: 1px solid var(--white-color);
   border-image: linear-gradient(180deg, rgba(14,16,255,1) 22%, rgba(71,219,248,1) 100%) 1;
+  border: 1px solid var(--white-color);
+  color: var(--blue-color);
+  padding: 5px 20px;
+  text-decoration: none;
   transition: all 0.2s ease-in-out;
 }
 
 .cta a:hover {
-  color: var(--white-color);
   background-color: var(--yellow-color);
+  color: var(--white-color);
 }

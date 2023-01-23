@@ -3,19 +3,17 @@ import "./styles.css";
 
 interface LoadingProps {
   open: boolean;
+  text?: string;
 }
 
-export const Loading: FC<LoadingProps> = ({ open }) => {
+export const Loading: FC<LoadingProps> = ({ open, text }) => {
   return (
     <>
       {open && (
         <div className="loading">
           <div className="loading-spinner" />
           <div>
-            <h2>
-              Estamos validando la información para indicarte la mejor solución
-              a la <strong className="highlight-yellow">Inverfobia</strong>
-            </h2>
+            <h2>{text ? text : "Cargando..."}</h2>
           </div>
         </div>
       )}
