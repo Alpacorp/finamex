@@ -1,6 +1,6 @@
 export const rollbarConfig = {
   accessToken: "2c94a14ff2444b56944d7fc3494a4652",
-  environment: "testenv",
+  environment: "production - v1",
   captureUncaught: true,
   captureUnhandledRejections: true,
   payload: {
