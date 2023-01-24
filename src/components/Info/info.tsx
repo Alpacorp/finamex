@@ -15,7 +15,7 @@ export const Info: FC = () => {
             </p>
             <p>
               <strong>Es un miedo a invertir que paraliza tu dinero </strong>
-              sin importar estado financiero, género ni edad, que está en
+              sin importar estado financiero, género, ni edad, que está en
               nuestro día a día y se manifiesta de múltiples formas.
             </p>
             <p>
