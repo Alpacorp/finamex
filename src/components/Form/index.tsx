@@ -7,7 +7,7 @@ import { apiCreateContact } from "../../apis/createContact";
 
 import { questions } from "../../db/questions/questions.json";
 import { useForm } from "../../hooks/useForm";
-import { sumRadioValues, capitalize } from "../../utils/";
+import { sumRadioValues, capitalize, validatePhone } from "../../utils/";
 
 import { Button } from "../Button";
 
@@ -30,7 +30,7 @@ export interface OptionsProps {
 
 export const Form: FC = () => {
   const { setScore, detectedDevice } = useContext(ScoreContext);
-  const [captchaStatus, setCaptchaStatus] = useState(false);
+  const [captchaStatus, setCaptchaStatus] = useState<Boolean>(false);
   const recaptchaRef: React.MutableRefObject<ReCAPTCHA | undefined> = useRef<
     ReCAPTCHA | undefined
   >();
@@ -51,7 +51,6 @@ export const Form: FC = () => {
 
   const handleChangeCaptcha = () => {
     const recaptchaValue = recaptchaRef?.current?.getValue();
-
     apiCreateContact
       .post("/captcha", {
         token: recaptchaValue,
@@ -114,6 +113,12 @@ export const Form: FC = () => {
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     handleChangeCaptcha();
+
+    if (!validatePhone(phone)) {
+      alert("❌ Por favor ingresa un número de celular válido 📲");
+      return;
+    }
+
     captchaStatus && handleCreateContact(e);
   };
 
@@ -139,11 +144,11 @@ export const Form: FC = () => {
                     return (
                       <div className="question-options" key={option.id}>
                         <input
-                          type="radio"
                           id={option.id}
                           name={question.id}
-                          value={option.value}
                           required
+                          type="radio"
+                          value={option.value}
                         />
                         <label htmlFor={option.id}>{option.option}</label>
                       </div>
@@ -163,43 +168,45 @@ export const Form: FC = () => {
         <div className="container data">
           <input
             className="input"
-            type="text"
-            name="firstname"
             id="firstname"
-            placeholder="Digita tus nombres"
+            minLength={3}
+            name="firstname"
             onChange={handleInputChange}
-            value={capitalize(firstname)}
+            placeholder="Digita tu(s) nombre(s)"
             required
-          />
-          <input
-            className="input"
             type="text"
-            name="lastname"
+            value={capitalize(firstname)}
+          />
+          <input
+            className="input"
             id="lastname"
-            placeholder="Digita tus apellidos"
+            minLength={3}
+            name="lastname"
             onChange={handleInputChange}
+            placeholder="Digita tu(s) apellido(s)"
+            required
+            type="text"
             value={capitalize(lastname)}
-            required
           />
           <input
             className="input"
-            type="number"
-            name="phone"
             id="phone"
+            name="phone"
             onChange={handleInputChange}
-            placeholder="Digita tu teléfono"
-            value={phone}
+            placeholder="Digita tu número telefónico (ej: 5548153528)"
             required
+            type="number"
+            value={phone}
           />
           <input
             className="input"
-            type="email"
-            name="email"
             id="email"
+            name="email"
             onChange={handleInputChange}
-            value={email}
             placeholder="Digita tu correo electrónico"
             required
+            type="email"
+            value={email}
           />
           <div className="terms">
             <input type="checkbox" name="terms" id="terms" required />

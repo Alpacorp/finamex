@@ -1,4 +1,5 @@
 import capitalize from "./capitalize";
 import sumRadioValues from "./sumRadioValues";
+import validatePhone from "./validatePhone";
 
-export { capitalize, sumRadioValues };
+export { capitalize, sumRadioValues, validatePhone };

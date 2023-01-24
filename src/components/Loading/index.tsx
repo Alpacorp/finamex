@@ -2,7 +2,7 @@ import { FC } from "react";
 import "./styles.css";
 
 interface LoadingProps {
-  open: boolean;
+  open: Boolean;
   text?: string;
 }
 

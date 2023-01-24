@@ -9,8 +9,9 @@ import { Hero } from "../../components/Hero";
 import { HeroImage } from "../../components/HeroImage";
 import { ScrollDown } from "../../components/ScrollDown/index";
 
-import "../../global-styles.css";
 import { typeDevice } from "../../utils/typeDevice";
+
+import "../../global-styles.css";
 
 export const App: FC = () => {
   const { score, setDetectedDevice } = useContext(ScoreContext);
