@@ -1,5 +1,6 @@
 import { FC, useContext, useRef, useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
+import { useRollbar } from "@rollbar/react";
 
 import ScoreContext from "../../context/ScoreContext";
 import { apiCreateContact } from "../../apis/createContact";
@@ -34,6 +35,7 @@ export const Form: FC = () => {
     ReCAPTCHA | undefined
   >();
   const siteKey = import.meta.env.VITE_RECAPTCHA_SITE_KEY as string;
+  const rollbar = useRollbar();
 
   const [formValues, handleInputChange, reset] = useForm({
     firstname: "",
@@ -70,9 +72,10 @@ export const Form: FC = () => {
         }
       })
       .catch((err) => {
-        console.log("err", err);
+        console.log("err ❌", err);
+        rollbar.info("Error en el registro de captcha", err);
         alert(
-          `${firstname}, tuvimos un error en el registro ❌ por favor intenta nuevamente o hazlo más tarde.`
+          `Hubo un error en el registro ❌ por favor intenta nuevamente o hazlo más tarde.`
         );
       });
   };
@@ -98,9 +101,10 @@ export const Form: FC = () => {
           );
       })
       .catch((err) => {
-        console.log("err", err);
+        console.log("err ❌", err);
+        rollbar.info("Error en el registro de contacto", err);
         alert(
-          `${firstname}, tuvimos un error en el registro ❌ por favor intenta nuevamente o hazlo más tarde.`
+          `Hubo un error en el registro ❌ por favor intenta nuevamente o hazlo más tarde.`
         );
       });
     setScore(total);

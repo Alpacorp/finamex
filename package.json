@@ -9,11 +9,13 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@rollbar/react": "^0.11.1",
     "axios": "^1.2.2",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-google-recaptcha": "^2.1.0",
-    "react-router-dom": "^6.6.2"
+    "react-router-dom": "^6.6.2",
+    "rollbar": "^2.26.1"
   },
   "devDependencies": {
     "@types/react": "^18.0.26",
@@ -25,5 +27,6 @@
     "vite": "^4.0.0"
   },
   "eslintConfig": {
-    "extends": "./node_modules/standard/eslintrc.json"}
+    "extends": "./node_modules/standard/eslintrc.json"
+  }
 }
