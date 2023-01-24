@@ -85,7 +85,9 @@ export const Responses: FC = () => {
           description={
             "Invierte desde $100 y despídete dela inverfobia tomando el control de tu dinero."
           }
-          link={"https://www.finamex.com.mx/general/mas-pesos"}
+          link={
+            "https://www.finamex.com.mx/general/mas-pesos?utm_source=landing-page&utm_id=inverfobia"
+          }
         >
           <Pesos color={"#F9A826"} />
         </CardResponse>
@@ -96,7 +98,9 @@ export const Responses: FC = () => {
           description={
             "Cura la inverfobia con más de 30 fondos en una estrategia que tu mismo puedes crear en nuestra app."
           }
-          link={"https://www.finamex.com.mx/general/fondos"}
+          link={
+            "https://www.finamex.com.mx/general/fondos?utm_source=landing-page&utm_id=inverfobia"
+          }
         >
           <Fondos color={"#A2E68A"} />
         </CardResponse>
@@ -107,7 +111,9 @@ export const Responses: FC = () => {
           description={
             "La inverfobia se va cuando te vuelves dueño de acciones en los mercado más importantes."
           }
-          link={"https://www.finamex.com.mx/general/finamex-trading/"}
+          link={
+            "https://www.finamex.com.mx/general/finamex-trading/?utm_source=landing-page&utm_id=inverfobia"
+          }
         >
           <Trading color={"#46D7FB"} />
         </CardResponse>
@@ -119,7 +125,7 @@ export const Responses: FC = () => {
             "Nuestros expertos analizan lo mejor para ti y te ofrecen las soluciones para olvidarte de la inverfobia para siempre."
           }
           link={
-            "https://www.finamex.com.mx/inversiones/estrategia-patrimonial/"
+            "https://www.finamex.com.mx/inversiones/estrategia-patrimonial/?utm_source=landing-page&utm_id=inverfobia"
           }
         >
           <Home color={"#8FA4E3"} />
@@ -127,7 +133,7 @@ export const Responses: FC = () => {
       </div>
       <Button
         type="link"
-        link="https://www.finamex.com.mx/"
+        link="https://www.finamex.com.mx/?utm_source=landing-page&utm_id=inverfobia"
         text="Conoce más de Finamex"
       />
     </section>

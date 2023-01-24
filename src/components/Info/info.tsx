@@ -14,7 +14,7 @@ export const Info: FC = () => {
               ataca a millones de mexicanos.
             </p>
             <p>
-              <strong>Es un miedo a invertir que paraliza tu dinero</strong>
+              <strong>Es un miedo a invertir que paraliza tu dinero </strong>
               sin importar estado financiero, género ni edad, que está en
               nuestro día a día y se manifiesta de múltiples formas.
             </p>
