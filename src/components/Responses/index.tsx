@@ -6,10 +6,10 @@ import { Fondos, Home, Pesos, Trading } from "../../assets/icons/";
 import { CardResponse } from "../CardResponse";
 import { Button } from "../Button";
 import { Loading } from "../Loading";
+import { Cta } from "../Cta";
 
 import "../../components/component-styles.css";
 import "./styles.css";
-import { Cta } from "../Cta";
 
 export const Responses: FC = () => {
   const [loading, setLoading] = useState<boolean>(true);
@@ -75,7 +75,7 @@ export const Responses: FC = () => {
     <section className="responses">
       <Loading
         open={loading}
-        text="Espera un momento mientras escribimos tu receta"
+        text="Espera un momento mientras escribimos tu receta ..."
       />
       <div className="container">
         <CardResponse

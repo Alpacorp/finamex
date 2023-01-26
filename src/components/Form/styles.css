@@ -88,7 +88,6 @@ input::placeholder {
 }
 
 .question-options {
-  /* padding: 2px 0; */
   box-sizing: content-box;
 }
 
@@ -113,7 +112,6 @@ input::placeholder {
 @media screen and (max-width: 560px) {
   .form .container {
     border: none;
-    padding-left: 0;
   }
 }
 @media screen and (max-width: 400px) {
