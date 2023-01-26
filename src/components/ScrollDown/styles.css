@@ -1,5 +1,6 @@
 .scroll-down {
   animation: scroll-down 2s infinite;
+  line-height: 1;
   margin: auto;
   max-width: 400px;
   text-align: center;
