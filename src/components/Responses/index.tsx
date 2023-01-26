@@ -8,6 +8,8 @@ import { Button } from "../Button";
 import { Loading } from "../Loading";
 import { Cta } from "../Cta";
 
+import { scrollTo } from "../../utils/scrollTo";
+
 import "../../components/component-styles.css";
 import "./styles.css";
 
@@ -52,19 +54,12 @@ export const Responses: FC = () => {
     }
   };
 
-  const scrollToTop = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: "smooth",
-    });
-  };
-
   useEffect(() => {
     setTimeout(() => {
       setLoading(false);
     }, 3000);
 
-    scrollToTop();
+    scrollTo();
     validatePesos();
     validateFondos();
     validateTrading();
