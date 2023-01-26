@@ -10,13 +10,12 @@ export const Info: FC = () => {
         <div>
           <div className="content">
             <p>
-              La <strong>inverfobia</strong> es un padecimiento silencioso que
-              ataca a millones de mexicanos.
+              <strong>El miedo a invertir que paraliza tu dinero </strong>
+              sin importar estado financiero, género, ni edad.
             </p>
             <p>
-              <strong>Es un miedo a invertir que paraliza tu dinero </strong>
-              sin importar estado financiero, género, ni edad, que está en
-              nuestro día a día y se manifiesta de múltiples formas.
+              Es un padecimiento silencioso presente en nuestro día a día que se
+              manifiesta de múltiples formas y ataca a millones de mexicanos.
             </p>
             <p>
               <strong className="highlight-yellow">

@@ -172,7 +172,7 @@ export const Form: FC = () => {
             minLength={3}
             name="firstname"
             onChange={handleInputChange}
-            placeholder="Digita tu(s) nombre(s)"
+            placeholder="Nombre(s)"
             required
             type="text"
             value={capitalize(firstname)}
@@ -183,7 +183,7 @@ export const Form: FC = () => {
             minLength={3}
             name="lastname"
             onChange={handleInputChange}
-            placeholder="Digita tu(s) apellido(s)"
+            placeholder="Apellido(s)"
             required
             type="text"
             value={capitalize(lastname)}
@@ -193,7 +193,7 @@ export const Form: FC = () => {
             id="phone"
             name="phone"
             onChange={handleInputChange}
-            placeholder="Digita tu número telefónico (ej: 5548153528)"
+            placeholder="Número telefónico"
             required
             type="number"
             value={phone}
@@ -203,7 +203,7 @@ export const Form: FC = () => {
             id="email"
             name="email"
             onChange={handleInputChange}
-            placeholder="Digita tu correo electrónico"
+            placeholder="Correo electrónico"
             required
             type="email"
             value={email}
