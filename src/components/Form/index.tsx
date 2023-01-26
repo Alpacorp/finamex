@@ -115,7 +115,9 @@ export const Form: FC = () => {
     handleChangeCaptcha();
 
     if (!validatePhone(phone)) {
-      alert("❌ Por favor ingresa un número de celular válido 📲");
+      alert(
+        "❌ Por favor ingresa un número de celular válido de 10 dígitos 📲"
+      );
       return;
     }
 
