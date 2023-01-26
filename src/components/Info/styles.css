@@ -1,6 +1,5 @@
 .info {
   text-align: center;
-  font-weight: 500;
 }
 
 .content {
@@ -12,12 +11,13 @@
 }
 
 .info .content p {
-  font-size: 17px;
-  line-height: 1.5;
-  margin: 13px 0;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 1.1;
+  margin: 8px 0;
   max-width: 500px;
   width: 100%;
-  letter-spacing: 1px;
+  letter-spacing: 0;
   text-align: left;
 }
 
@@ -33,7 +33,7 @@
   }
 
   .info .content p {
-    font-size: 13px;
+    font-size: 15px;
     margin: 5px;
   }
 

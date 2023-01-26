@@ -1,22 +1,21 @@
 .hero {
-  margin: auto;
-  height: 90vh;
-  display: grid;
   align-items: center;
+  display: grid;
+  height: 90vh;
+  margin: auto;
 }
 
 .hero .container {
+  align-items: center;
+  border-image: linear-gradient(180deg, rgba(14,16,255,1) 22%, rgba(71,219,248,1) 100%) 1;
+  border-left: 3px solid var(--blue-color);
   display: grid;
   grid-template-columns: auto auto;
-  margin: 80px;
   justify-items: center;
-  align-items: center;
-  border-left: 3px solid var(--blue-color);
-  border-image: linear-gradient(180deg, rgba(14,16,255,1) 22%, rgba(71,219,248,1) 100%) 1;
+  margin: 80px;
 }
 
 .main-message {
-  font-size: 60px;
   font-family: var(--quaternary-font);
   display: flex;
   flex: 1;
@@ -25,13 +24,15 @@
 }
 
 .main-message h1 {
+  font-size: 80px;
   text-transform: uppercase;
-  background: linear-gradient(180deg, rgba(71,219,248,1) 22%, rgb(27, 112, 129) 100%);
+  background: linear-gradient(180deg, rgb(113, 214, 235) 22%, rgb(113, 161, 216) 100%);
   -webkit-text-fill-color: transparent;
   background-clip: text;
   -webkit-background-clip: text;
   color: transparent;
   line-height: 1;
+  font-weight: bold;
 }
 
 @media screen and (max-width: 550px) {
@@ -68,7 +69,7 @@
 
 @media screen and (max-height: 600px) {
   .main-message h1 {
-    font-size: 30px;
+    font-size: 40px;
   }
 }
 

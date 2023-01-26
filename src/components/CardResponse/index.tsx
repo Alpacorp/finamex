@@ -13,7 +13,7 @@ interface CardResponseProps {
 }
 
 export const CardResponse: FC<CardResponseProps> = ({
-  active,
+  active = true,
   children,
   description,
   link,

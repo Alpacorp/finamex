@@ -7,7 +7,7 @@
 }
 
 .cta a {
-  border-image: linear-gradient(180deg, rgba(14,16,255,1) 22%, rgba(71,219,248,1) 100%) 1;
+  border-image: linear-gradient(180deg, rgb(88, 168, 221) 22%, rgba(71,219,248,1) 100%) 1;
   border: 1px solid var(--white-color);
   color: var(--blue-color);
   padding: 5px 20px;

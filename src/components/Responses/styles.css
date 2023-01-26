@@ -2,14 +2,15 @@
   text-align: center;
   display: grid;
   align-items: center;
-  height: 100vh;
+  height: 90vh;
   margin: 20px 0;
 }
 
 .responses .container {
   display: grid;
   grid-template-columns: auto auto;
-  gap: 80px;
+  column-gap: 80px;
+  row-gap: 10px;
   margin: 0 80px;
   justify-content: center;
   border-left: 3px solid var(--blue-color);

@@ -3,7 +3,7 @@
 }
 
 .button button {
-  background-color: transparent;
+  background-color: var(--dark-bg-color);
   border-image: linear-gradient(180deg, rgba(14,16,255,1) 22%, rgba(71,219,248,1) 100%) 1;
   border: 1px solid var(--white-color);
   color: var(--blue-color);
@@ -21,12 +21,8 @@
   color: var(--white-color);
 }
 
-.button {
-  text-align: center;
-}
-
 .button a {
-  background-color: transparent;
+  background-color: var(--dark-bg-color);
   border-image: linear-gradient(180deg, rgba(14,16,255,1) 22%, rgba(71,219,248,1) 100%) 1;
   border: 1px solid var(--white-color);
   color: var(--blue-color);
@@ -36,6 +32,7 @@
   max-width: 120px;
   padding: 5px 20px;
   text-decoration: none;
+  text-transform: uppercase;
   transition: all 0.2s ease-in-out;
   width: 100%;
 }

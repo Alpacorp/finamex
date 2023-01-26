@@ -124,15 +124,6 @@ export const Form: FC = () => {
 
   return (
     <section id="form" className="form">
-      <div className="container title">
-        <div className="form-title">
-          <p>
-            Completa el siguiente formulario y{" "}
-            <span className="highlight-yellow">descubre la solución</span>{" "}
-            específica para enfrentar sus síntomas
-          </p>
-        </div>
-      </div>
       <form onSubmit={handleSubmit}>
         <div className="container">
           {questions.map((question: QuestionProps) => {
@@ -161,8 +152,10 @@ export const Form: FC = () => {
         </div>
         <div className="form-title">
           <p>
-            Registra tus datos para{" "}
-            <span className="highlight-yellow">mostrar tu resultado</span>
+            Registra tus datos y{" "}
+            <span className="highlight-yellow">
+              encuentra la cura contra tu tipo de Inverfobia
+            </span>
           </p>
         </div>
         <div className="container data">
@@ -224,7 +217,7 @@ export const Form: FC = () => {
             size={detectedDevice === "mobile" ? "compact" : "normal"}
           />
         </div>
-        <Button type="button" text="Enviar" />
+        <Button type="button" text="ENVIAR" />
       </form>
     </section>
   );

@@ -16,7 +16,7 @@ export const Hero: FC<HeroProps> = ({ children }) => {
         <div className="container">
           <div className="main-message">
             <h1>
-              adiós <br />
+              adios <br />
               inverfobia
             </h1>
             <Info />

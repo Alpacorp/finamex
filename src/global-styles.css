@@ -1,7 +1,7 @@
 @font-face {
   font-family: 'Cosi';
   font-style: normal;
-  font-weight: 400;
+  font-weight: 400, 700, 900, 100, 300, 500, 600, 800;
   src: url(./assets/fonts/cosi.woff2);
 }
 
@@ -47,7 +47,7 @@
 }
 
 html {
-  background-color: #061923;
+  background-color: var(--dark-bg-color);
   color: var(--white-color);
   box-sizing: border-box;
   scroll-behavior: smooth;
@@ -57,7 +57,7 @@ html {
   --white-color: #fff;
   --black-color: #000;
   --blue-color: #07C4EF;
-  --blue-light-color: #bae2eb;
+  --blue-light-color: #cee0e4;
   --dark-bg-color: #061923;
   --dark-blue-color: #001D70;
   --yellow-color: #F2822c;

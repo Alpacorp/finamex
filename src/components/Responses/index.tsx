@@ -9,6 +9,7 @@ import { Loading } from "../Loading";
 
 import "../../components/component-styles.css";
 import "./styles.css";
+import { Cta } from "../Cta";
 
 export const Responses: FC = () => {
   const [loading, setLoading] = useState<boolean>(true);
@@ -74,8 +75,7 @@ export const Responses: FC = () => {
     <section className="responses">
       <Loading
         open={loading}
-        text="Estamos validando la información para indicarte la mejor solución
-              a la Inverfobia"
+        text="Espera un momento mientras escribimos tu receta"
       />
       <div className="container">
         <CardResponse
@@ -83,7 +83,7 @@ export const Responses: FC = () => {
           subtitle={"Tu cura contra la inverfobia es"}
           title={"Finamex +Pesos"}
           description={
-            "Invierte desde $100 y despídete dela inverfobia tomando el control de tu dinero."
+            "Invierte desde $100 y despídete de la inverfobia tomando el control de tu dinero."
           }
           link={
             "https://www.finamex.com.mx/general/mas-pesos?utm_source=landing-page&utm_id=inverfobia"
@@ -131,11 +131,13 @@ export const Responses: FC = () => {
           <Home color={"#8FA4E3"} />
         </CardResponse>
       </div>
-      <Button
-        type="link"
-        link="https://www.finamex.com.mx/?utm_source=landing-page&utm_id=inverfobia"
-        text="Conoce más de Finamex"
-      />
+      <Cta>
+        <Button
+          type="link"
+          link="https://www.finamex.com.mx/?utm_source=landing-page&utm_id=inverfobia"
+          text="Conoce más de Finamex"
+        />
+      </Cta>
     </section>
   );
 };

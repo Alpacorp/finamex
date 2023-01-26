@@ -6,7 +6,8 @@ export const ScrollDown: FC = () => {
   return (
     <div className="scroll-down">
       <strong>
-        Desliza para hacer tu test y saber qué tipo de inverfobia tienes
+        Desliza para hacer tu test
+        <br />y saber qué tipo de inverfobia tienes
       </strong>
       <div title="Scroll down">
         <svg

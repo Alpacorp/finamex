@@ -3,10 +3,14 @@
 }
 
 .form .form-title {
-  text-align: center;
   font-size: 20px;
   font-weight: 600;
-  margin-top: 20px 0;
+  letter-spacing: 1px;
+  margin: auto;
+  margin-top: 80px;
+  max-width: 350px;
+  width: 100%;
+  text-align: center;
 }
 
 .form .container.title {
@@ -14,13 +18,13 @@
 }
 
 .form .container {
-  display: grid;
-  grid-template-columns: auto auto;
-  gap: 50px;
-  margin: 80px;
-  justify-content: center;
-  border-left: 3px solid var(--blue-color);
   border-image: linear-gradient(180deg, rgba(14,16,255,1) 22%, rgba(71,219,248,1) 100%) 1;
+  border-left: 3px solid var(--blue-color);
+  display: grid;
+  gap: 50px;
+  grid-template-columns: auto auto;
+  justify-content: center;
+  margin: 30px 80px;
 }
 
 .input {
@@ -36,23 +40,24 @@ input::placeholder {
 }
 
 .container.data {
+  align-items: center;
   display: flex;
   flex-direction: column;
-  justify-content: space-around;
-  align-items: center;
   flex-wrap: wrap;
   gap: 20px;
+  justify-content: space-around;
 }
 
 .container .input {
-  border: none;
-  max-width: 500px;
-  width: 100%;
   border-bottom: 2px solid var(--blue-color);
-  padding: 10px;
   border-radius: 10px;
+  border: none;
   color: var(--black-color);
+  font-size: 18px;
   font-weight: bold;
+  max-width: 500px;
+  padding: 10px;
+  width: 100%;
 }
 
 .form .container .button {
@@ -61,6 +66,7 @@ input::placeholder {
 
 .form .terms label {
   margin-left: 5px;
+  font-weight: bold;
 }
 
 .form .terms a {
@@ -70,11 +76,11 @@ input::placeholder {
 
 .form .terms a:hover {
   text-decoration: underline;
-  font-weight: bold;
 }
 
 .question-content {
   box-sizing: border-box;
+  font-size: 20px;
 }
 
 .question-title {
@@ -82,7 +88,7 @@ input::placeholder {
 }
 
 .question-options {
-  padding: 2px 0;
+  /* padding: 2px 0; */
   box-sizing: content-box;
 }
 
@@ -91,7 +97,7 @@ input::placeholder {
 }
 
 .question-options label {
-  margin-left: 10px;
+  margin-left: 5px;
 }
 
 .question-options:hover > label {
@@ -112,21 +118,27 @@ input::placeholder {
 }
 @media screen and (max-width: 400px) {
   .form {
-    font-size: 13px;
+    font-size: 15px;
   }
 
   .form .container {
-    padding: 0 30px;
+    gap: 30px;
     margin: 30px 0;
-    gap: 30px
+    padding: 0 30px;
   }
 
   .form .form-title {
-    font-size: 14px;
+    font-size: 15px;
+    margin-top: 40px;
+    max-width: 300px;
   }
 
   .container .input {
     width: 90%;
+  }
+
+  .container .question-content {
+    font-size: 15px;
   }
 }
 
