@@ -1,5 +1,5 @@
 export const rollbarConfig = {
-  accessToken: "2c94a14ff2444b56944d7fc3494a4652",
+  accessToken: import.meta.env.VITE_ROLLBAR_ACCESS_TOKEN,
   environment: "production - v1",
   captureUncaught: true,
   captureUnhandledRejections: true,
