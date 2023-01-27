@@ -16,11 +16,8 @@ export const Info: FC = () => {
               sin importar estado financiero, género, ni edad.
             </p>
             <p>
-              <strong>
-                Es un padecimiento silencioso presente en nuestro día a día
-              </strong>{" "}
-              que se manifiesta de múltiples formas y ataca a millones de
-              mexicanos.
+              Es un padecimiento silencioso presente en nuestro día a día que se
+              manifiesta de múltiples formas y ataca a millones de mexicanos.
             </p>
             <p>
               <strong className="highlight-yellow">

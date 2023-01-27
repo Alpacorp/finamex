@@ -13,6 +13,10 @@
   text-align: center;
 }
 
+.form .form-title p, .form .form-title span {
+  font-family: 'Neue DemiBold';
+}
+
 .form .container.title {
   border: none;
 }
@@ -63,9 +67,14 @@ input::placeholder {
   text-align: center;
 }
 
+.form .terms {
+  margin: 20px auto;
+}
+
 .form .terms label {
-  margin-left: 5px;
+  font-family: 'Neue DemiBold';
   font-weight: bold;
+  margin-left: 5px;
 }
 
 .form .terms a {
@@ -79,15 +88,18 @@ input::placeholder {
 
 .question-content {
   box-sizing: border-box;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .question-title {
-  margin-bottom: 10px;
+  font-family: 'Neue DemiBold';
+  font-size: 20px;
+  margin-bottom: 20px;
 }
 
 .question-options {
   box-sizing: content-box;
+  margin: 3px 0;
 }
 
 .question-options > * {

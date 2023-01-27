@@ -96,7 +96,7 @@ export const Form: FC = () => {
         res.status === 200 &&
           !res.data.message.code &&
           alert(
-            `Hola ${firstname} ${lastname}, tu registro fue exitoso. A continuación, te mostramos tu resultado ✅`
+            `Hola ${firstname} ${lastname}, tu registro está completo y los expertos ya te esperan. Veamos tu resultado y superemos la inverfobia`
           );
       })
       .catch((err) => {
