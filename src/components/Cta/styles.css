@@ -19,3 +19,15 @@
   background-color: var(--yellow-color);
   color: var(--white-color);
 }
+
+@media screen and (min-width: 550px) and (max-width: 700px) {
+  .cta {
+    display: none;
+  }
+}
+
+@media screen and (max-height: 500px) and (max-width: 900px) {
+  .cta {
+    display: none;
+  }
+}
