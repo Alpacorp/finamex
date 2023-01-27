@@ -136,9 +136,10 @@ input::placeholder {
   }
 
   .form .form-title {
-    font-size: 15px;
+    font-size: 20px;
+    line-height: 1;
     margin-top: 40px;
-    max-width: 300px;
+    max-width: 280px;
   }
 
   .container .input {
