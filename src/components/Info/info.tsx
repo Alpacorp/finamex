@@ -10,7 +10,9 @@ export const Info: FC = () => {
         <div>
           <div className="content">
             <p>
-              <strong>Es el miedo a invertir que paraliza tu dinero </strong>
+              <strong>
+                La Inverfobia es el miedo a invertir que paraliza tu dinero{" "}
+              </strong>
               sin importar estado financiero, género, ni edad.
             </p>
             <p>
