@@ -2,129 +2,155 @@
   "questions": [
     {
       "id": "1A",
-      "title": "¿Cómo buscas darle seguridad a tu dinero?",
+      "title": "Escuchas la palabra invertir. Inmediatamente tú:",
       "options": [
         {
           "id": "1A-1",
-          "option": "Lo pongo bajo el colchón",
+          "option": "Huyo para no perder dinero.",
           "value": 1
         },
         {
           "id": "1A-2",
-          "option": "Tengo una cuenta de ahorros en un banco",
+          "option": "Sé que me dá, pero no sé cuánto.",
           "value": 2
         },
         {
           "id": "1A-3",
-          "option": "No tengo dinero",
+          "option": "¿Y eso con qué se come?",
           "value": 3
+        },
+        {
+          "id": "1A-4",
+          "option": "Ya invierto sin miedo.",
+          "value": 4
         }
-      ]
+      ],
+      "subquestions": []
     },
     {
       "id": "2A",
-      "title": "Si alguna vez has invertido ¿En qué lo has hecho?",
+      "title": "¿Tienes metas a futuro para las que quieras ahorrar?",
       "options": [
         {
           "id": "2A-1",
-          "option": "En acciones y fondos de inversión",
+          "option": "Sí y ya es pronto.",
           "value": 1
         },
         {
           "id": "2A-2",
-          "option": "En oro y metales preciosos",
+          "option": "Sí, pero todavía falta mucho.",
           "value": 2
         },
         {
           "id": "2A-3",
-          "option": "En criptomonedas",
+          "option": "Para nada.",
           "value": 3
         }
-      ]
+      ],
+      "subquestions": []
     },
     {
       "id": "3A",
-      "title": "¿Alguna vez has ralizado una inversión?",
+      "title": "¿Qué haces para ahorrar?",
       "options": [
         {
           "id": "3A-1",
-          "option": "Si, con lo ahorrado en un cochinito",
+          "option": "Eh ... ¿Ahorrar? ¿Yo?",
           "value": 1
         },
         {
           "id": "3A-2",
-          "option": "Si, participé en varias tandas",
+          "option": "Guardo dinero en mi casa, bajo el colchón, los cajones o entre las tandas.",
           "value": 2
         },
         {
           "id": "3A-3",
-          "option": "No, tengo pavor a perder mi dinero",
+          "option": "Lo 'aparto' en mi cuenta de banco.",
           "value": 3
+        }
+      ],
+      "subquestions": [
+        {
+          "id": "3AA",
+          "title": "¿Sabes en qué estás invirtiendo?",
+          "options": [
+            {
+              "id": "3AA-1",
+              "option": "Si"
+            },
+            {
+              "id": "3AA-2",
+              "option": "No"
+            }
+          ]
+        },
+        {
+          "id": "3AB",
+          "title": "¿Qué es lo que te gusta de tu actual cuenta?",
+          "options": [
+            {
+              "id": "3AB-1",
+              "option": "Sus rendimientos."
+            },
+            {
+              "id": "3AB-2",
+              "option": "Atención a clientes."
+            },
+            {
+              "id": "3AB-3",
+              "option": "Aplicación sencilla."
+            },
+            {
+              "id": "3AB-4",
+              "option": "Institución conocida."
+            },
+            {
+              "id": "3AB-5",
+              "option": "No conozco otra opción, siempre he estado ahí."
+            }
+          ]
+        },
+        {
+          "id": "3AC",
+          "title": "¿Está contento con los rendimientos?",
+          "options": [
+            {
+              "id": "3AC-1",
+              "option": "Superan mis expectativas."
+            },
+            {
+              "id": "3AC-2",
+              "option": "Estoy conforme."
+            },
+            {
+              "id": "3AC-3",
+              "option": "Quiero más."
+            }
+          ]
         }
       ]
     },
     {
       "id": "4A",
-      "title": "Al invertir, ¿a qué le temes?",
+      "title": "Y si invirtieras ¿Qué esperarías que sucediera?",
       "options": [
         {
           "id": "4A-1",
-          "option": "A perderlo todo",
+          "option": "Mantener estable mi dinero.",
           "value": 1
         },
         {
           "id": "4A-2",
-          "option": "A no obtener los resultados previstos",
+          "option": "Aumentar mis ganancias con rendimientos constantes.",
           "value": 2
         },
         {
           "id": "4A-3",
-          "option": "A no entenderle",
+          "option": "Tener grandes ganancias aunque represente cierto riesgo.",
           "value": 3
         }
-      ]
-    },
-    {
-      "id": "5A",
-      "title": "Al invertir, ¿a qué le temes?",
-      "options": [
-        {
-          "id": "5A-1",
-          "option": "A perderlo todo",
-          "value": 1
-        },
-        {
-          "id": "5A-2",
-          "option": "A no obtener los resultados previstos",
-          "value": 2
-        },
-        {
-          "id": "5A-3",
-          "option": "A no entenderle",
-          "value": 3
-        }
-      ]
-    },
-    {
-      "id": "6A",
-      "title": "Al invertir, ¿a qué le temes?",
-      "options": [
-        {
-          "id": "6A-1",
-          "option": "A perderlo todo",
-          "value": 1
-        },
-        {
-          "id": "6A-2",
-          "option": "A no obtener los resultados previstos",
-          "value": 2
-        },
-        {
-          "id": "6A-3",
-          "option": "A no entenderle",
-          "value": 3
-        }
-      ]
+      ],
+      "subquestions": []
     }
   ]
 }

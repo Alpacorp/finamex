@@ -26,7 +26,6 @@
   border-left: 3px solid var(--blue-color);
   display: grid;
   gap: 50px;
-  grid-template-columns: auto auto;
   justify-content: center;
   margin: 30px 80px;
 }
