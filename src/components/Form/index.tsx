@@ -149,69 +149,75 @@ export const Form: FC = () => {
         <div className="container">
           {questions.map((question: QuestionProps) => {
             return (
-              <div className="question-content" key={question.id}>
-                <h4 className="question-title">{question.title}</h4>
-                <div key={question.id}>
-                  {question.options?.map((option: OptionsProps) => {
-                    return (
-                      <div className="question-options" key={option.id}>
-                        <input
-                          id={option.id}
-                          name={question.id}
-                          required
-                          type="radio"
-                          value={option.value}
-                          onChange={() => {
-                            setSelectedOption(option.id as string);
-                            setSelectedQuestion(question.id as string);
-                          }}
-                        />
-                        <label htmlFor={option.id}>{option.option}</label>
-                        <div className="subquestions">
-                          {show &&
-                            option?.subquestions?.map(
-                              (subquestion: QuestionProps) => {
-                                return (
-                                  <div
-                                    className="subquestion-content"
-                                    key={subquestion.id}
-                                  >
-                                    <h4 className="subquestion-title">
-                                      {subquestion.title}
-                                    </h4>
-                                    <div key={subquestion.id}>
-                                      {subquestion.options?.map(
-                                        (option: OptionsProps) => {
-                                          return (
-                                            <div
-                                              className="subquestion-options"
-                                              key={option.id}
-                                            >
-                                              <input
-                                                id={option.id}
-                                                name={subquestion.id}
-                                                required
-                                                type="radio"
-                                                value={option.value}
-                                              />
-                                              <label htmlFor={option.id}>
-                                                {option.option}
-                                              </label>
-                                            </div>
-                                          );
-                                        }
-                                      )}
-                                    </div>
-                                  </div>
-                                );
-                              }
-                            )}
+              <>
+                <hr />
+                <div className="question-content" key={question.id}>
+                  <h4 className="question-title">{question.title}</h4>
+                  <div key={question.id}>
+                    {question.options?.map((option: OptionsProps) => {
+                      return (
+                        <div className="question-options" key={option.id}>
+                          <input
+                            id={option.id}
+                            name={question.id}
+                            required
+                            type="radio"
+                            value={option.value}
+                            onChange={() => {
+                              setSelectedOption(option.id as string);
+                              setSelectedQuestion(question.id as string);
+                            }}
+                          />
+                          <label htmlFor={option.id}>{option.option}</label>
+                          <div className="subquestions">
+                            {show &&
+                              option?.subquestions?.map(
+                                (subquestion: QuestionProps) => {
+                                  return (
+                                    <>
+                                      <hr />
+                                      <div
+                                        className="subquestion-content"
+                                        key={subquestion.id}
+                                      >
+                                        <h4 className="subquestion-title">
+                                          {subquestion.title}
+                                        </h4>
+                                        <div key={subquestion.id}>
+                                          {subquestion.options?.map(
+                                            (option: OptionsProps) => {
+                                              return (
+                                                <div
+                                                  className="subquestion-options"
+                                                  key={option.id}
+                                                >
+                                                  <input
+                                                    id={option.id}
+                                                    name={subquestion.id}
+                                                    required
+                                                    type="radio"
+                                                    value={option.value}
+                                                  />
+                                                  <label htmlFor={option.id}>
+                                                    {option.option}
+                                                  </label>
+                                                </div>
+                                              );
+                                            }
+                                          )}
+                                        </div>
+                                      </div>
+                                    </>
+                                  );
+                                }
+                              )}
+                          </div>
                         </div>
-                      </div>
-                    );
-                  })}
+                      );
+                    })}
+                  </div>
                 </div>
-              </div>
+              </>
             );
           })}
         </div>

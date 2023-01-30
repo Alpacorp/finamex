@@ -90,6 +90,11 @@ input::placeholder {
   font-size: 18px;
 }
 
+hr {
+  border: none;
+  border-bottom: 1px solid var(--yellow-light-color);
+}
+
 .question-title {
   font-family: 'Neue DemiBold';
   font-size: 20px;
@@ -115,6 +120,12 @@ input::placeholder {
 
 .subquestions {
   margin-left: 10px;
+}
+
+.subquestions hr {
+  border: none;
+  border-bottom: 1px solid var(--blue-color);
+  margin: 10px 0;
 }
 
 .subquestion-content {
