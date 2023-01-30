@@ -125,6 +125,7 @@ input::placeholder {
 .subquestion-title {
   font-family: 'Neue DemiBold';
   font-size: 15px;
+  letter-spacing: 1px;
   margin-bottom: 5px;
 }
 

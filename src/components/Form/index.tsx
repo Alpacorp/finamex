@@ -1,4 +1,4 @@
-import { FC, useContext, useRef, useState } from "react";
+import { FC, useContext, useEffect, useRef, useState } from "react";
 import ReCAPTCHA from "react-google-recaptcha";
 import { useRollbar } from "@rollbar/react";
 
@@ -32,7 +32,10 @@ export interface OptionsProps {
 export const Form: FC = () => {
   const { setScore, detectedDevice } = useContext(ScoreContext);
   const [captchaStatus, setCaptchaStatus] = useState<Boolean>(false);
+  const [selectedQuestion, setSelectedQuestion] = useState<string>("");
+  const [selectedOption, setSelectedOption] = useState<string>("");
   const [show, setShow] = useState<Boolean>(false);
+
   const recaptchaRef: React.MutableRefObject<ReCAPTCHA | undefined> = useRef<
     ReCAPTCHA | undefined
   >();
@@ -51,9 +54,19 @@ export const Form: FC = () => {
   const { firstname, lastname, phone, email } = formValues;
   const { total } = sumRadioValues();
 
-  const handleShow = (value: any): void => {
-    value?.length > 0 && setShow(true);
+  const handleShow = (): void => {
+    if (selectedQuestion === "3A" && selectedOption === "3A-4") {
+      setShow(true);
+    } else if (selectedQuestion !== "3A" && show) {
+      setShow(true);
+    } else {
+      setShow(false);
+    }
   };
+
+  useEffect(() => {
+    handleShow();
+  }, [selectedOption]);
 
   const handleChangeCaptcha = () => {
     const recaptchaValue = recaptchaRef?.current?.getValue();
@@ -148,7 +161,10 @@ export const Form: FC = () => {
                           required
                           type="radio"
                           value={option.value}
-                          onClick={() => handleShow(option.subquestions)}
+                          onChange={() => {
+                            setSelectedOption(option.id as string);
+                            setSelectedQuestion(question.id as string);
+                          }}
                         />
                         <label htmlFor={option.id}>{option.option}</label>
                         <div className="subquestions">
