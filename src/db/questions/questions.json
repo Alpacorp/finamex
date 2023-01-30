@@ -24,8 +24,7 @@
           "option": "Ya invierto sin miedo.",
           "value": 4
         }
-      ],
-      "subquestions": []
+      ]
     },
     {
       "id": "2A",
@@ -46,8 +45,7 @@
           "option": "Para nada.",
           "value": 3
         }
-      ],
-      "subquestions": []
+      ]
     },
     {
       "id": "3A",
@@ -67,64 +65,79 @@
           "id": "3A-3",
           "option": "Lo 'aparto' en mi cuenta de banco.",
           "value": 3
-        }
-      ],
-      "subquestions": [
-        {
-          "id": "3AA",
-          "title": "¿Sabes en qué estás invirtiendo?",
-          "options": [
-            {
-              "id": "3AA-1",
-              "option": "Si"
-            },
-            {
-              "id": "3AA-2",
-              "option": "No"
-            }
-          ]
         },
         {
-          "id": "3AB",
-          "title": "¿Qué es lo que te gusta de tu actual cuenta?",
-          "options": [
+          "id": "3A-4",
+          "option": "Lo tengo en un pagaré o en una cuenta de inversión",
+          "value": 4,
+          "subquestions": [
             {
-              "id": "3AB-1",
-              "option": "Sus rendimientos."
+              "id": "3AA",
+              "title": "¿Sabes en qué estás invirtiendo?",
+              "options": [
+                {
+                  "id": "3AA-1",
+                  "option": "Si",
+                  "value": 1
+                },
+                {
+                  "id": "3AA-2",
+                  "option": "No",
+                  "value": 2
+                }
+              ]
             },
             {
-              "id": "3AB-2",
-              "option": "Atención a clientes."
+              "id": "3AB",
+              "title": "¿Qué es lo que te gusta de tu actual cuenta?",
+              "options": [
+                {
+                  "id": "3AB-1",
+                  "option": "Sus rendimientos.",
+                  "value": 1
+                },
+                {
+                  "id": "3AB-2",
+                  "option": "Atención a clientes.",
+                  "value": 2
+                },
+                {
+                  "id": "3AB-3",
+                  "option": "Aplicación sencilla.",
+                  "value": 3
+                },
+                {
+                  "id": "3AB-4",
+                  "option": "Institución conocida.",
+                  "value": 4
+                },
+                {
+                  "id": "3AB-5",
+                  "option": "No conozco otra opción, siempre he estado ahí.",
+                  "value": 5
+                }
+              ]
             },
             {
-              "id": "3AB-3",
-              "option": "Aplicación sencilla."
-            },
-            {
-              "id": "3AB-4",
-              "option": "Institución conocida."
-            },
-            {
-              "id": "3AB-5",
-              "option": "No conozco otra opción, siempre he estado ahí."
-            }
-          ]
-        },
-        {
-          "id": "3AC",
-          "title": "¿Está contento con los rendimientos?",
-          "options": [
-            {
-              "id": "3AC-1",
-              "option": "Superan mis expectativas."
-            },
-            {
-              "id": "3AC-2",
-              "option": "Estoy conforme."
-            },
-            {
-              "id": "3AC-3",
-              "option": "Quiero más."
+              "id": "3AC",
+              "title": "¿Está contento con los rendimientos?",
+              "options": [
+                {
+                  "id": "3AC-1",
+                  "option": "Superan mis expectativas.",
+                  "value": 1
+                },
+                {
+                  "id": "3AC-2",
+                  "option": "Estoy conforme.",
+                  "value": 2
+                },
+                {
+                  "id": "3AC-3",
+                  "option": "Quiero más.",
+                  "value": 3
+                }
+              ]
             }
           ]
         }
@@ -149,8 +162,7 @@
           "option": "Tener grandes ganancias aunque represente cierto riesgo.",
           "value": 3
         }
-      ],
-      "subquestions": []
+      ]
     }
   ]
 }
