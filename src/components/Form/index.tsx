@@ -26,11 +26,13 @@ export interface OptionsProps {
   title?: string;
   option?: string;
   value?: number;
+  subquestions?: QuestionProps[] | undefined | [];
 }
 
 export const Form: FC = () => {
   const { setScore, detectedDevice } = useContext(ScoreContext);
   const [captchaStatus, setCaptchaStatus] = useState<Boolean>(false);
+  const [show, setShow] = useState<Boolean>(false);
   const recaptchaRef: React.MutableRefObject<ReCAPTCHA | undefined> = useRef<
     ReCAPTCHA | undefined
   >();
@@ -48,6 +50,10 @@ export const Form: FC = () => {
 
   const { firstname, lastname, phone, email } = formValues;
   const { total } = sumRadioValues();
+
+  const handleShow = (value: any): void => {
+    value?.length > 0 ? setShow(true) : setShow(false);
+  };
 
   const handleChangeCaptcha = () => {
     const recaptchaValue = recaptchaRef?.current?.getValue();
@@ -142,8 +148,49 @@ export const Form: FC = () => {
                           required
                           type="radio"
                           value={option.value}
+                          onClick={() => handleShow(option.subquestions)}
                         />
                         <label htmlFor={option.id}>{option.option}</label>
+                        <div className="subquestions">
+                          {show &&
+                            option?.subquestions?.map(
+                              (subquestion: QuestionProps) => {
+                                return (
+                                  <div
+                                    className="subquestion-content"
+                                    key={subquestion.id}
+                                  >
+                                    <h4 className="subquestion-title">
+                                      {subquestion.title}
+                                    </h4>
+                                    <div key={subquestion.id}>
+                                      {subquestion.options?.map(
+                                        (option: OptionsProps) => {
+                                          return (
+                                            <div
+                                              className="subquestion-options"
+                                              key={option.id}
+                                            >
+                                              <input
+                                                id={option.id}
+                                                name={subquestion.id}
+                                                required
+                                                type="radio"
+                                                value={option.value}
+                                              />
+                                              <label htmlFor={option.id}>
+                                                {option.option}
+                                              </label>
+                                            </div>
+                                          );
+                                        }
+                                      )}
+                                    </div>
+                                  </div>
+                                );
+                              }
+                            )}
+                        </div>
                       </div>
                     );
                   })}

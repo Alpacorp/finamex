@@ -113,6 +113,21 @@ input::placeholder {
   color: var(--blue-color);
 }
 
+.subquestions {
+  margin-left: 10px;
+}
+
+.subquestion-content {
+  margin-top: 10px;
+  font-size: 15px;
+}
+
+.subquestion-title {
+  font-family: 'Neue DemiBold';
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
 @media screen and (max-width: 980px) {
   .form .container {
     grid-template-columns: auto;
