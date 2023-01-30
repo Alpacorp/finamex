@@ -140,6 +140,14 @@ hr {
   margin-bottom: 5px;
 }
 
+.subquestion-options > * {
+  cursor: pointer;
+}
+
+.subquestion-options:hover > label {
+  color: var(--blue-color);
+}
+
 @media screen and (max-width: 980px) {
   .form .container {
     grid-template-columns: auto;
