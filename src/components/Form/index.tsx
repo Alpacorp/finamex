@@ -149,7 +149,7 @@ export const Form: FC = () => {
         <div className="container">
           {questions.map((question: QuestionProps) => {
             return (
-              <>
+              <div key={question.id}>
                 <hr />
                 <div className="question-content" key={question.id}>
                   <h4 className="question-title">{question.title}</h4>
@@ -158,15 +158,15 @@ export const Form: FC = () => {
                       return (
                         <div className="question-options" key={option.id}>
                           <input
+                            type="radio"
                             id={option.id}
                             name={question.id}
-                            required
-                            type="radio"
-                            value={option.value}
                             onChange={() => {
                               setSelectedOption(option.id as string);
                               setSelectedQuestion(question.id as string);
                             }}
+                            value={option.value}
+                            required
                           />
                           <label htmlFor={option.id}>{option.option}</label>
                           <div className="subquestions">
@@ -217,7 +217,7 @@ export const Form: FC = () => {
                     })}
                   </div>
                 </div>
-              </>
+              </div>
             );
           })}
         </div>
