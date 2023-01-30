@@ -72,68 +72,68 @@
           "value": 4,
           "subquestions": [
             {
-              "id": "3AA",
+              "id": "3A-4A",
               "title": "¿Sabes en qué estás invirtiendo?",
               "options": [
                 {
-                  "id": "3AA-1",
+                  "id": "3A-4A1",
                   "option": "Si",
                   "value": 1
                 },
                 {
-                  "id": "3AA-2",
+                  "id": "3A-4A2",
                   "option": "No",
                   "value": 2
                 }
               ]
             },
             {
-              "id": "3AB",
+              "id": "3A-4B",
               "title": "¿Qué es lo que te gusta de tu actual cuenta?",
               "options": [
                 {
-                  "id": "3AB-1",
+                  "id": "3A-4B1",
                   "option": "Sus rendimientos.",
                   "value": 1
                 },
                 {
-                  "id": "3AB-2",
+                  "id": "3A-4B2",
                   "option": "Atención a clientes.",
                   "value": 2
                 },
                 {
-                  "id": "3AB-3",
+                  "id": "3A-4B3",
                   "option": "Aplicación sencilla.",
                   "value": 3
                 },
                 {
-                  "id": "3AB-4",
+                  "id": "3A-4B4",
                   "option": "Institución conocida.",
                   "value": 4
                 },
                 {
-                  "id": "3AB-5",
+                  "id": "3A-4B5",
                   "option": "No conozco otra opción, siempre he estado ahí.",
                   "value": 5
                 }
               ]
             },
             {
-              "id": "3AC",
+              "id": "3A-4C",
               "title": "¿Está contento con los rendimientos?",
               "options": [
                 {
-                  "id": "3AC-1",
+                  "id": "3A-4C1",
                   "option": "Superan mis expectativas.",
                   "value": 1
                 },
                 {
-                  "id": "3AC-2",
+                  "id": "3A-4C2",
                   "option": "Estoy conforme.",
                   "value": 2
                 },
                 {
-                  "id": "3AC-3",
+                  "id": "3A-4C3",
                   "option": "Quiero más.",
                   "value": 3
                 }

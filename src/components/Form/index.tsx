@@ -52,7 +52,7 @@ export const Form: FC = () => {
   const { total } = sumRadioValues();
 
   const handleShow = (value: any): void => {
-    value?.length > 0 ? setShow(true) : setShow(false);
+    value?.length > 0 && setShow(true);
   };
 
   const handleChangeCaptcha = () => {
