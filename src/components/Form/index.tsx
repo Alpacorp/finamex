@@ -288,7 +288,7 @@ export const Form: FC = () => {
             size={detectedDevice === "mobile" ? "compact" : "normal"}
           />
         </div>
-        <Button type="button" text="ENVIAR" />
+        <Button type="button" text="ENVIAR TEST" />
       </form>
     </section>
   );
