@@ -3,6 +3,7 @@ import { Route, Routes } from "react-router-dom";
 
 import { Layout } from "./Layout";
 import { App } from "../pages/App";
+import { Terms } from "../pages/Terms";
 
 export const AppRouter: FC = () => {
   const maintenance = import.meta.env.VITE_MAINTENANCE || "false";
@@ -15,6 +16,7 @@ export const AppRouter: FC = () => {
       <Routes>
         <Route path="/" element={<App />} />
         <Route path="/*" element={<App />} />
+        <Route path="/terminos" element={<Terms />} />
       </Routes>
     </Layout>
   );

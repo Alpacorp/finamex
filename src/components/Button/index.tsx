@@ -6,9 +6,15 @@ interface ButtonProps {
   link?: string;
   text: string;
   type: "button" | "link";
+  target?: string;
 }
 
-export const Button: FC<ButtonProps> = ({ type, text, link }) => {
+export const Button: FC<ButtonProps> = ({
+  type,
+  text,
+  link,
+  target = "_blank",
+}) => {
   return (
     <>
       {type === "button" ? (
@@ -17,7 +23,7 @@ export const Button: FC<ButtonProps> = ({ type, text, link }) => {
         </div>
       ) : (
         <div className="button">
-          <a href={link} target="_blank">
+          <a href={link} target={target}>
             {text}
           </a>
         </div>

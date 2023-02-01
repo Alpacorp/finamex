@@ -276,7 +276,7 @@ export const Form: FC = () => {
             <input type="checkbox" name="terms" id="terms" required />
             <label htmlFor="terms">
               Acepta la{" "}
-              <a href="" target="_blank">
+              <a href="/terminos" target="_blank">
                 política de privacidad
               </a>
             </label>
