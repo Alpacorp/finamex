@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 
 import { Button } from "../../components/Button";
+import { Cta } from "../../components/Cta";
 
 import { scrollTo } from "../../utils";
 
@@ -323,9 +324,9 @@ export const Terms = () => {
           presente Aviso de Privacidad será regulado por las disposiciones
           aplicables de la Ley.
         </p>
-        <div className="terms-button">
-          <Button type="link" text="Volver" link="/" />
-        </div>
+        <Cta>
+          <Button type="link" link="/" text="Volver" />
+        </Cta>
       </div>
     </section>
   );
