@@ -9,7 +9,7 @@ import { Hero } from "../../components/Hero";
 import { HeroImage } from "../../components/HeroImage";
 import { ScrollDown } from "../../components/ScrollDown/index";
 
-import { scrollTo, typeDevice } from "../../utils";
+import { typeDevice } from "../../utils";
 
 import "../../global-styles.css";
 
@@ -18,7 +18,6 @@ export const App: FC = () => {
 
   useEffect(() => {
     setDetectedDevice(typeDevice());
-    scrollTo();
   }, []);
 
   return (
