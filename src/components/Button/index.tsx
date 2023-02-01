@@ -1,4 +1,5 @@
 import { FC } from "react";
+import { Link } from "react-router-dom";
 
 import "./styles.css";
 
@@ -6,15 +7,9 @@ interface ButtonProps {
   link?: string;
   text: string;
   type: "button" | "link";
-  target?: string;
 }
 
-export const Button: FC<ButtonProps> = ({
-  type,
-  text,
-  link,
-  target = "_blank",
-}) => {
+export const Button: FC<ButtonProps> = ({ type, text, link }) => {
   return (
     <>
       {type === "button" ? (
@@ -23,9 +18,7 @@ export const Button: FC<ButtonProps> = ({
         </div>
       ) : (
         <div className="button">
-          <a href={link} target={target}>
-            {text}
-          </a>
+          <Link to={`${link}`}>{text}</Link>
         </div>
       )}
     </>

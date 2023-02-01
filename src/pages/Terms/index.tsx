@@ -1,8 +1,17 @@
+import { useEffect } from "react";
+
 import { Button } from "../../components/Button";
+
+import { scrollTo } from "../../utils";
+
 import "../../components/component-styles.css";
 import "./styles.css";
 
 export const Terms = () => {
+  useEffect(() => {
+    scrollTo();
+  }, []);
+
   return (
     <section className="terms">
       <div className="container">
@@ -315,7 +324,7 @@ export const Terms = () => {
           aplicables de la Ley.
         </p>
         <div className="terms-button">
-          <Button type="link" text="Volver" link="/" target="_self" />
+          <Button type="link" text="Volver" link="/" />
         </div>
       </div>
     </section>

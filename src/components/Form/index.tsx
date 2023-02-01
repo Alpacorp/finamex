@@ -13,6 +13,7 @@ import { Button } from "../Button";
 
 import "../../components/component-styles.css";
 import "./styles.css";
+import { Link } from "react-router-dom";
 
 export interface QuestionProps {
   id?: string | undefined;
@@ -275,10 +276,7 @@ export const Form: FC = () => {
           <div className="terms">
             <input type="checkbox" name="terms" id="terms" required />
             <label htmlFor="terms">
-              Acepta la{" "}
-              <a href="/terminos" target="_blank">
-                política de privacidad
-              </a>
+              Acepta la <Link to={"/terminos"}>política de privacidad</Link>
             </label>
           </div>
           <ReCAPTCHA

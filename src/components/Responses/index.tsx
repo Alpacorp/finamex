@@ -8,7 +8,7 @@ import { Button } from "../Button";
 import { Loading } from "../Loading";
 import { Cta } from "../Cta";
 
-import { scrollTo } from "../../utils/scrollTo";
+import { scrollTo } from "../../utils";
 
 import "../../components/component-styles.css";
 import "./styles.css";
