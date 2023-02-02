@@ -111,6 +111,7 @@ hr {
 }
 
 .question-options label {
+  font-weight: 600;
   margin-left: 5px;
 }
 
