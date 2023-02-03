@@ -1,12 +1,31 @@
 .terms .container {
   font-size: 15px;
+  font-weight: 600;
   margin: 20px 0;
   padding: 100px;
   text-align: justify;
 }
 
+.terms .container h1 {
+  font-size: 30px;
+  font-weight: 700;
+  margin: 20px 0;
+}
+
+.terms .container h3 {
+  font-family: 'Neue Regular';
+  font-size: 20px;
+  font-weight: 700;
+  margin: 20px 0;
+}
+
 .terms .container p {
   margin: 10px 0;
+  letter-spacing: 1px;
+}
+
+.terms .container ul {
+  margin-left: 30px;
 }
 
 .terms-button {
