@@ -24,7 +24,7 @@ export const App: FC = () => {
     <>
       {score === 0 ? (
         <div>
-          <Hero>{/* <HeroImage /> */}</Hero>
+          <Hero></Hero>
           <Cta>
             <ScrollDown />
           </Cta>

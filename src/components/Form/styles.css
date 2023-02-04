@@ -1,5 +1,6 @@
 .form {
-  margin: 20px auto;
+  margin: auto;
+  padding-bottom: 20px;
 }
 
 .form .form-title {

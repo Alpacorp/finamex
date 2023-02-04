@@ -6,7 +6,7 @@ import "../../components/component-styles.css";
 import "./styles.css";
 
 interface HeroProps {
-  children: React.ReactNode;
+  children?: React.ReactNode;
 }
 
 export const Hero: FC<HeroProps> = ({ children }) => {
