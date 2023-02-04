@@ -3,10 +3,6 @@
   display: grid;
   height: 100vh;
   margin: auto;
-  background-image: url(../../assets/images/background-hero.png);
-  background-size: contain;
-  background-position: right;
-  background-repeat: no-repeat;
 }
 
 .hero .container {

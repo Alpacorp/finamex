@@ -7,10 +7,6 @@
   transition: all 0.1s ease-in-out;
 }
 
-/* .hero-image .image:hover {
-  box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.8);
-} */
-
 @media screen and (max-width: 950px) {
   .hero-image .image {
     max-width: 250px;
