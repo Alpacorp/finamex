@@ -54,7 +54,6 @@ html {
 }
 
 body {
-  background-image: url('./background-hero.png');
   background-repeat: no-repeat;
   background-attachment: fixed;
   background-size: 115%;
