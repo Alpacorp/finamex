@@ -6,7 +6,6 @@ import { Target } from "../Target";
 import { Cta } from "../../components/Cta";
 import { Form } from "../../components/Form";
 import { Hero } from "../../components/Hero";
-import { HeroImage } from "../../components/HeroImage";
 import { ScrollDown } from "../../components/ScrollDown/index";
 
 import { typeDevice } from "../../utils";
