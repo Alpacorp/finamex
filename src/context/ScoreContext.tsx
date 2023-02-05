@@ -1,15 +1,15 @@
 import { createContext, useState } from "react";
 
+interface ScoreProviderProps {
+  children: React.ReactNode;
+}
+
 const ScoreContext = createContext({
   score: 0,
   setScore: (score: number) => {},
   detectedDevice: "",
   setDetectedDevice: (detectedDevice: string) => {},
 });
-
-interface ScoreProviderProps {
-  children: React.ReactNode;
-}
 
 export const ScoreProvider = ({ children }: ScoreProviderProps) => {
   const [score, setScore] = useState(0);
