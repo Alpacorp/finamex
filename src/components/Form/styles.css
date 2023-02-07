@@ -191,5 +191,8 @@ hr {
   .question-content {
     padding: 0 70px;
   }
+  hr {
+    margin: 20px 70px;
+  }
 }
 

@@ -29,17 +29,7 @@ export const Question: FC<OptionsProps> = ({
           <h4 className="question-title">{title}</h4>
           <div key={id}>
             <div className="question-options" key={id}>
-              <input
-                id={id}
-                name={id}
-                required
-                type="radio"
-                value={value}
-                // onClick={() => {
-                //   setSelectedOption(id);
-                //   setShowAdditionalInput(true);
-                // }}
-              />
+              <input id={id} name={id} required type="radio" value={value} />
               <label htmlFor={id}>{option}</label>
             </div>
           </div>
