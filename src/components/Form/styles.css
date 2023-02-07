@@ -187,3 +187,9 @@ hr {
   }
 }
 
+@media (orientation: landscape) and (max-width: 980px) {
+  .question-content {
+    padding: 0 70px;
+  }
+}
+
