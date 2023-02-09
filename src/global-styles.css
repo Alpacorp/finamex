@@ -47,16 +47,16 @@
 }
 
 html {
-  background-color: var(--dark-bg-color);
-  color: var(--white-color);
+  background-color: #aec6d1de;
   box-sizing: border-box;
+  color: var(--white-color);
   scroll-behavior: smooth;
 }
 
 body {
   background-repeat: no-repeat;
   background-attachment: fixed;
-  background-size: 115%;
+  background-size: 110%;
   background-position: center;
 }
 

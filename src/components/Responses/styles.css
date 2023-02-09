@@ -17,7 +17,16 @@
   padding: 0 140px;
 }
 
+.responses .cta {
+  margin: 30px 0;
+}
+
 @media screen and (max-width: 980px) {
+  .responses {
+    height: auto;
+    margin-bottom: 50px;
+  }
+
   .responses .container {
     grid-template-columns: auto;
   }

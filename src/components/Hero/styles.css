@@ -1,7 +1,7 @@
 .hero {
   align-items: center;
   display: grid;
-  height: 100vh;
+  height: 80vh;
   margin: auto;
 }
 
@@ -10,9 +10,10 @@
   border-image: linear-gradient(180deg, rgba(14,16,255,1) 22%, rgba(71,219,248,1) 100%) 1;
   border-left: 3px solid var(--blue-color);
   display: grid;
-  grid-template-columns: auto auto;
-  justify-items: center;
-  margin: 80px;
+  grid-template-columns: auto;
+  justify-items: left;
+  margin: 0 80px;
+  padding-left: 50px;
 }
 
 .main-message {
@@ -57,14 +58,11 @@
 @media screen and (max-width: 560px) {
   .hero .container {
     border: none;
+    padding: 0;
   }
 }
 
 @media screen and (max-width: 550px) {
-  .hero {
-    background-image: none;
-  }
-
   .main-message h1 {
     font-size: 50px;
   }
@@ -82,6 +80,7 @@
 
   .hero .container {
     margin: 0;
+    padding: 0;
   }
 }
 

@@ -226,7 +226,7 @@ export const Form: FC = () => {
           <p>
             Registra tus datos y{" "}
             <span className="highlight-yellow">
-              encuentra la cura contra tu tipo de Inverfobia
+              recibe tu diagnóstico de acuerdo a tu tipo de Inverfobia
             </span>
           </p>
         </div>
