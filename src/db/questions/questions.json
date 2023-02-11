@@ -2,48 +2,48 @@
   "questions": [
     {
       "id": "1A",
-      "title": "Escuchas la palabra invertir. Inmediatamente tú:",
+      "title": "¿Por qué te da miedo invertir?",
       "options": [
         {
           "id": "1A-1",
-          "option": "Huyo para no perder dinero.",
+          "option": "Puedo perder mi dinero.",
           "value": 1
         },
         {
           "id": "1A-2",
-          "option": "Sé que me dá, pero no sé cuánto.",
+          "option": "No sé cuánto me dará de rendimiento.",
           "value": 2
         },
         {
           "id": "1A-3",
-          "option": "¿Y eso con qué se come?",
-          "value": 3
+          "option": "No entiendo de inversiones.",
+          "value": 1
         },
         {
           "id": "1A-4",
-          "option": "Ya invierto sin miedo.",
-          "value": 4
+          "option": "Ya invierto, no me da miedo.",
+          "value": 3
         }
       ]
     },
     {
       "id": "2A",
-      "title": "¿Tienes metas a futuro para las que quieras ahorrar?",
+      "title": "¿Tienes algún 'sueño' definido que implique tener que ahorrar para cumplirlo?",
       "options": [
         {
           "id": "2A-1",
           "option": "Sí y ya es pronto.",
-          "value": 1
+          "value": 0
         },
         {
           "id": "2A-2",
-          "option": "Sí, pero todavía falta mucho.",
-          "value": 2
+          "option": "Sí, para más adelante.",
+          "value": 0
         },
         {
           "id": "2A-3",
-          "option": "Para nada.",
-          "value": 3
+          "option": "No aún.",
+          "value": 0
         }
       ]
     },
@@ -53,23 +53,23 @@
       "options": [
         {
           "id": "3A-1",
-          "option": "Eh ... ¿Ahorrar? ¿Yo?",
+          "option": "Por el momento no ahorro.",
           "value": 1
         },
         {
           "id": "3A-2",
-          "option": "Guardo dinero en mi casa, bajo el colchón, los cajones o entre las tandas.",
+          "option": "Guardo dinero en mi casa, o le entro a una tanda.",
           "value": 2
         },
         {
           "id": "3A-3",
-          "option": "Lo 'aparto' en mi cuenta de banco.",
-          "value": 3
+          "option": "Lo dejo en mi cuenta de débito o nómina, lo 'aparto'.",
+          "value": 2
         },
         {
           "id": "3A-4",
           "option": "Lo tengo en un pagaré o en una cuenta de inversión",
-          "value": 4,
+          "value": 3,
           "subquestions": [
             {
               "id": "3A-4A",
@@ -78,12 +78,12 @@
                 {
                   "id": "3A-4A1",
                   "option": "Si",
-                  "value": 1
+                  "value": 0
                 },
                 {
                   "id": "3A-4A2",
                   "option": "No",
-                  "value": 2
+                  "value": 0
                 }
               ]
             },
@@ -94,27 +94,27 @@
                 {
                   "id": "3A-4B1",
                   "option": "Sus rendimientos.",
-                  "value": 1
+                  "value": 0
                 },
                 {
                   "id": "3A-4B2",
                   "option": "Atención a clientes.",
-                  "value": 2
+                  "value": 0
                 },
                 {
                   "id": "3A-4B3",
                   "option": "Aplicación sencilla.",
-                  "value": 3
+                  "value": 0
                 },
                 {
                   "id": "3A-4B4",
                   "option": "Institución conocida.",
-                  "value": 4
+                  "value": 0
                 },
                 {
                   "id": "3A-4B5",
                   "option": "No conozco otra opción, siempre he estado ahí.",
-                  "value": 5
+                  "value": 0
                 }
               ]
             },
@@ -125,17 +125,17 @@
                 {
                   "id": "3A-4C1",
                   "option": "Superan mis expectativas.",
-                  "value": 1
+                  "value": 0
                 },
                 {
                   "id": "3A-4C2",
                   "option": "Estoy conforme.",
-                  "value": 2
+                  "value": 0
                 },
                 {
                   "id": "3A-4C3",
                   "option": "Quiero más.",
-                  "value": 3
+                  "value": 0
                 }
               ]
             }
@@ -145,21 +145,21 @@
     },
     {
       "id": "4A",
-      "title": "Y si invirtieras ¿Qué esperarías que sucediera?",
+      "title": "¿Qué es lo que esperas de una inversión?",
       "options": [
         {
           "id": "4A-1",
-          "option": "Mantener estable mi dinero.",
+          "option": "Mantener mi capital sin volatilidad.",
           "value": 1
         },
         {
           "id": "4A-2",
-          "option": "Aumentar mis ganancias con rendimientos constantes.",
+          "option": "Aumentar mi patrimonio con rendimientos estables.",
           "value": 2
         },
         {
           "id": "4A-3",
-          "option": "Tener grandes ganancias aunque represente cierto riesgo.",
+          "option": "Lo más importante es tener un rendimiento alto aunque represente mayor volatilidad.",
           "value": 3
         }
       ]
