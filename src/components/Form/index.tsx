@@ -1,4 +1,5 @@
 import { FC, useContext, useEffect, useRef, useState } from "react";
+import { Link } from "react-router-dom";
 import ReCAPTCHA from "react-google-recaptcha";
 import { useRollbar } from "@rollbar/react";
 
@@ -13,7 +14,6 @@ import { Button } from "../Button";
 
 import "../../components/component-styles.css";
 import "./styles.css";
-import { Link } from "react-router-dom";
 
 export interface QuestionProps {
   id?: string | undefined;
@@ -36,6 +36,7 @@ export const Form: FC = () => {
   const [selectedQuestion, setSelectedQuestion] = useState<string>("");
   const [selectedOption, setSelectedOption] = useState<string>("");
   const [show, setShow] = useState<Boolean>(false);
+  const { total } = sumRadioValues();
 
   const recaptchaRef: React.MutableRefObject<ReCAPTCHA | undefined> = useRef<
     ReCAPTCHA | undefined
@@ -52,8 +53,7 @@ export const Form: FC = () => {
     company: "Inverfobia",
   });
 
-  const { firstname, lastname, phone, email } = formValues;
-  const { total } = sumRadioValues();
+  const { firstname, lastname, phone, email, website, company } = formValues;
 
   const handleShow = (): void => {
     if (selectedQuestion === "3A" && selectedOption === "3A-4") {
@@ -102,11 +102,23 @@ export const Form: FC = () => {
   const handleCreateContact = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     apiCreateContact
-      .post("/hubspot/contact", formValues, {
-        headers: {
-          "Content-Type": "application/json",
+      .post(
+        "/hubspot/contact",
+        {
+          firstname,
+          lastname,
+          phone,
+          email,
+          website,
+          company,
+          scoreinv: total,
         },
-      })
+        {
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      )
       .then((res) => {
         res.status === 200 &&
           res.data.message.code === 409 &&
@@ -175,7 +187,7 @@ export const Form: FC = () => {
                               option?.subquestions?.map(
                                 (subquestion: QuestionProps) => {
                                   return (
-                                    <>
+                                    <div key={subquestion.id}>
                                       <hr />
                                       <div
                                         className="subquestion-content"
@@ -198,6 +210,7 @@ export const Form: FC = () => {
                                                     required
                                                     type="radio"
                                                     value={option.value}
+                                                    onChange={handleInputChange}
                                                   />
                                                   <label htmlFor={option.id}>
                                                     {option.option}
@@ -208,7 +221,7 @@ export const Form: FC = () => {
                                           )}
                                         </div>
                                       </div>
-                                    </>
+                                    </div>
                                   );
                                 }
                               )}
