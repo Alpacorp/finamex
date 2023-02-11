@@ -23,7 +23,7 @@ export const Responses: FC = () => {
   const { score } = useContext(ScoreContext);
 
   const validatePesos = () => {
-    if (score >= 1 && score <= 7) {
+    if (score >= 3 && score <= 9) {
       setPesos(true);
     } else {
       setPesos(false);
@@ -31,7 +31,7 @@ export const Responses: FC = () => {
   };
 
   const validateFondos = () => {
-    if (score >= 8 && score <= 11) {
+    if (score >= 5 && score <= 9) {
       setFondos(true);
     } else {
       setFondos(false);
@@ -39,7 +39,7 @@ export const Responses: FC = () => {
   };
 
   const validateTrading = () => {
-    if (score >= 12 && score <= 15) {
+    if (score >= 7 && score <= 9) {
       setTrading(true);
     } else {
       setTrading(false);
@@ -47,7 +47,7 @@ export const Responses: FC = () => {
   };
 
   const validateHome = () => {
-    if (score >= 16) {
+    if (score === 9) {
       setHome(true);
     } else {
       setHome(false);
