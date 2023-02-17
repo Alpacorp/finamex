@@ -2,7 +2,6 @@ import React from "react";
 import ReactDOM from "react-dom/client";
 import { BrowserRouter } from "react-router-dom";
 import { Provider } from "@rollbar/react";
-import { Analytics } from "@vercel/analytics/react";
 
 import { AppRouter } from "./containers/AppRouter";
 
@@ -16,7 +15,6 @@ ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
       <ScoreProvider>
         <BrowserRouter>
           <AppRouter />
-          <Analytics />
         </BrowserRouter>
       </ScoreProvider>
     </Provider>
