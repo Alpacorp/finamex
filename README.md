@@ -44,7 +44,7 @@ Los servidores que permiten la correcta visualización del proyecto pueden ser:
 - Dedicado de NODE
 - AWS a través de S3
 
-Nuestra recomendación para que sea un deploy rápid, es el uso de un servidor Linux en donde pasamos a entregar el código fuente en una carpeta "dist" y una vez allí en la administración de los archivos se extare el contenido para que finalmente se vea en el dominio asociado a ese contenido que para este caso esperamos que sea [adiosinverfobia.com]
+Nuestra recomendación para que sea un deploy rápido, es el uso de un servidor Linux en donde pasamos a entregar el código fuente en una carpeta "dist" y una vez allí en la administración de los archivos se extare el contenido para que finalmente se vea en el dominio asociado a ese contenido que para este caso esperamos que sea [adiosinverfobia.com]
 
 # Estructura del proyecto
 

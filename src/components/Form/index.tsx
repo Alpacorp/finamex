@@ -50,7 +50,7 @@ export const Form: FC = () => {
     lastname: "",
     phone: "",
     email: "",
-    website: "https://inverfobia.com",
+    website: "https://adiosinverfobia.com",
     company: "Inverfobia",
   });
 
