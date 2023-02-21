@@ -4,7 +4,10 @@ import "./styles.css";
 
 export const ScrollDown: FC = () => {
   return (
-    <div className="scroll-down">
+    <div
+      className="scroll-down"
+      title="Desliza para hacer tu test y saber qué tipo de inverfobia tienes"
+    >
       <strong>
         Desliza para hacer tu test
         <br />y saber qué tipo de inverfobia tienes
@@ -18,6 +21,7 @@ export const ScrollDown: FC = () => {
           stroke="currentColor"
           className="w-6 h-6"
         >
+          <title>Desplázate</title>
           <path
             strokeLinecap="round"
             strokeLinejoin="round"

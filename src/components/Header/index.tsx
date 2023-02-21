@@ -11,7 +11,7 @@ export const Header: FC = () => {
     <header className="header">
       <nav className="nav">
         <div className="container">
-          <a className="link-logo" href="/">
+          <a className="link-logo" href="/" title="Finamex">
             <img src={finamexLogo} alt="logo" />
           </a>
         </div>

@@ -182,7 +182,9 @@ export const Form: FC = () => {
                             value={option.value}
                             required
                           />
-                          <label htmlFor={option.id}>{option.option}</label>
+                          <label htmlFor={option.id} title={option.option}>
+                            {option.option}
+                          </label>
                           <div className="subquestions">
                             {show &&
                               option?.subquestions?.map(
@@ -254,6 +256,8 @@ export const Form: FC = () => {
             placeholder="Nombre(s)"
             required
             type="text"
+            aria-label="Nombre(s)"
+            title="Nombre(s)"
             value={capitalize(firstname)}
           />
           <input
@@ -265,6 +269,8 @@ export const Form: FC = () => {
             placeholder="Apellido(s)"
             required
             type="text"
+            aria-label="Apellido(s)"
+            title="Apellido(s)"
             value={capitalize(lastname)}
           />
           <input
@@ -275,6 +281,8 @@ export const Form: FC = () => {
             placeholder="Número telefónico"
             required
             type="number"
+            aria-label="Número telefónico"
+            title="Número telefónico"
             value={phone}
           />
           <input
@@ -285,12 +293,17 @@ export const Form: FC = () => {
             placeholder="Correo electrónico"
             required
             type="email"
+            aria-label="Correo electrónico"
+            title="Correo electrónico"
             value={email}
           />
           <div className="terms">
             <input type="checkbox" name="terms" id="terms" required />
             <label htmlFor="terms">
-              Acepta la <Link to={"/terminos"}>política de privacidad</Link>
+              Acepta la{" "}
+              <Link to={"/terminos"} title="política de privacidad">
+                política de privacidad
+              </Link>
             </label>
           </div>
           <ReCAPTCHA
@@ -300,7 +313,7 @@ export const Form: FC = () => {
             size={detectedDevice === "mobile" ? "compact" : "normal"}
           />
         </div>
-        <Button type="button" text="ENVIAR TEST" />
+        <Button aria-label="Enviar Test" type="button" text="ENVIAR TEST" />
       </form>
     </section>
   );

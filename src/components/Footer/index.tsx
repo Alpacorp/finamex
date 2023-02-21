@@ -8,8 +8,8 @@ export const Footer: FC = () => {
   return (
     <footer className="footer">
       <div className="container">
-        <div className="logo">
-          <img src={finamexLogoDark} alt="logo finamex" />
+        <div className="logo" title="Finamex">
+          <img src={finamexLogoDark} alt="logo Finamex" />
         </div>
         <div className="description">
           <p>
@@ -26,6 +26,7 @@ export const Footer: FC = () => {
             <a
               href="https://www.finamex.com.mx/Terminos-Y-Condiciones/Terminos-Y-Condiciones"
               target="_blank"
+              title="Términos y Condiciones"
             >
               https://www.finamex.com.mx/Terminos-Y-Condiciones/Terminos-Y-Condiciones
             </a>
@@ -36,6 +37,7 @@ export const Footer: FC = () => {
               <a
                 href="https://apps.apple.com/mx/app/finamex/id1522057093"
                 target="_blank"
+                title="Disponible en App Store"
               >
                 <img src={appleStore} alt="Disponible en App Store" />
               </a>
@@ -44,6 +46,7 @@ export const Footer: FC = () => {
               <a
                 href="https://play.google.com/store/apps/details?id=com.finamex.online&hl=es_MX&gl=US"
                 target="_blank"
+                title="Disponible en Google Play"
               >
                 <img src={googlePlay} alt="Disponible en Google Play" />
               </a>

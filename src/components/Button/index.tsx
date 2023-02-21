@@ -13,11 +13,11 @@ export const Button: FC<ButtonProps> = ({ type, text, link }) => {
   return (
     <>
       {type === "button" ? (
-        <div className="button">
+        <div title={text} className="button">
           <button>{text}</button>
         </div>
       ) : (
-        <div className="button">
+        <div title={text} className="button">
           <Link to={`${link}`}>{text}</Link>
         </div>
       )}

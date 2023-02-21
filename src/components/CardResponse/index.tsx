@@ -21,7 +21,7 @@ export const CardResponse: FC<CardResponseProps> = ({
   title,
 }) => {
   return (
-    <div className={`service ${active ? "active" : "disabled"}`}>
+    <div className={`service ${active ? "active" : "disabled"}`} title={title}>
       <a href={link} target="_blank">
         <div className="service-icon">{children}</div>
         <div>
