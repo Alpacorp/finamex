@@ -24,6 +24,7 @@
   box-shadow: 0 0 3px var(--yellow-light-color);
   cursor: pointer;
   justify-content: center;
+  box-sizing: border-box;
 }
 
 .disabled {
@@ -40,7 +41,7 @@
 }
 
 .service .service-subtitle {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: lighter;
 }
 
@@ -52,7 +53,7 @@
 
 .service .service-description {
   color: var(--blue-color);
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   margin: auto;
   max-width: 350px;
@@ -61,7 +62,7 @@
 
 @media screen and (max-width: 400px) {
   .service {
-    padding: 0;
+    padding: 10px;
   }
 
   .service .service-title {
@@ -69,6 +70,6 @@
   }
 
   .service .service-description {
-    font-size: 12px;
+    font-size: 16px;
   }
 }

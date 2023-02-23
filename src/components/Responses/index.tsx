@@ -75,10 +75,12 @@ export const Responses: FC = () => {
       <div className="container">
         <CardResponse
           active={pesos}
-          subtitle={"Tu cura contra la inverfobia es"}
+          subtitle={
+            "El miedo es normal, pero si paraliza tu dinero es síntoma de algo más. Tu          inverfobia es avanzada pero no te preocupes, el primer paso para curarla es"
+          }
           title={"Finamex +Pesos"}
           description={
-            "Invierte desde $100 y despídete de la inverfobia tomando el control de tu dinero."
+            "Deposita fácil tus ahorros, selecciona el plazo y verás qué ganancia obtienes de esa inversión. Sin miedo, sin complicaciones."
           }
           link={
             "https://www.finamex.com.mx/general/mas-pesos?utm_source=landing-page&utm_id=inverfobia"
@@ -88,10 +90,12 @@ export const Responses: FC = () => {
         </CardResponse>
         <CardResponse
           active={fondos}
-          subtitle={"Tu tratamiento ideal es"}
+          subtitle={
+            "¡Aguas! Tu inverfobia es intermitente y podría hacer que te confundas con tus finanzas, pero juntos vamos a tratarla con"
+          }
           title={"Finamex Fondos"}
           description={
-            "Cura la inverfobia con más de 30 fondos en una estrategia que tu mismo puedes crear en nuestra app."
+            "¡Elige tu estrategia y ve lo fácil que crece tu dinero! Cada fondo tiene un mix de valores para comprar o vender como cualquier acción e invertir seguro."
           }
           link={
             "https://www.finamex.com.mx/general/fondos?utm_source=landing-page&utm_id=inverfobia"
@@ -101,10 +105,12 @@ export const Responses: FC = () => {
         </CardResponse>
         <CardResponse
           active={trading}
-          subtitle={"La solución indicada para ti es"}
+          subtitle={
+            "¡Wow! Casi la vences, pero la inverfobia todavía no te deja por completo. Olvídala con"
+          }
           title={"Finamex Trading"}
           description={
-            "La inverfobia se va cuando te vuelves dueño de acciones en los mercado más importantes."
+            "Compra y vende tus acciones favoritas a nivel mundial y nosotros te ayudamos a obtener el mejor rendimiento. ¿Cuál inverfobia?"
           }
           link={
             "https://www.finamex.com.mx/general/finamex-trading/?utm_source=landing-page&utm_id=inverfobia"
@@ -114,10 +120,12 @@ export const Responses: FC = () => {
         </CardResponse>
         <CardResponse
           active={home}
-          subtitle={"Alíviate de la inverfobia con"}
+          subtitle={
+            "¡La Inverfobia no puede contigo! Pero más vale prevenirla con"
+          }
           title={"Finamex Patrimonial"}
           description={
-            "Nuestros expertos analizan lo mejor para ti y te ofrecen las soluciones para olvidarte de la inverfobia para siempre."
+            "Arma tu estrategia con nuestros expertos llevando tu rendimiento a lo más alto, y hazte inmune a la Inverfobia protegiendo tus activos en México y el mundo."
           }
           link={
             "https://www.finamex.com.mx/inversiones/estrategia-patrimonial/?utm_source=landing-page&utm_id=inverfobia"
