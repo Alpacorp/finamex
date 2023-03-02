@@ -51,7 +51,7 @@ export const Form: FC = () => {
     phone: "",
     email: "",
     website: "https://adiosinverfobia.com",
-    company: "Inverfobia",
+    company: "Inverfobia - V1",
   });
 
   const { firstname, lastname, phone, email, website, company } = formValues;
