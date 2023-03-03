@@ -18,7 +18,9 @@ export const Button: FC<ButtonProps> = ({ type, text, link }) => {
         </div>
       ) : (
         <div title={text} className="button">
-          <Link to={`${link}`}>{text}</Link>
+          <a href={`${link}`} target="_blank">
+            {text}
+          </a>
         </div>
       )}
     </>
