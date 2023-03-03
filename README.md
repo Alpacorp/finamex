@@ -46,6 +46,10 @@ Los servidores que permiten la correcta visualización del proyecto pueden ser:
 
 Nuestra recomendación para que sea un deploy rápido, es el uso de un servidor Linux en donde pasamos a entregar el código fuente en una carpeta "dist" y una vez allí en la administración de los archivos se extare el contenido para que finalmente se vea en el dominio asociado a ese contenido que para este caso esperamos que sea [adiosinverfobia.com]
 
+# Especificaciones de Hardware
+
+Básicamente que soporte Node y JavaScript
+
 # Estructura del proyecto
 
 El proyecto está conformado por las siguientes carpetas:
@@ -176,3 +180,16 @@ Inverfobia Versión 2:
 
 Url del dominio oficial:
 [adiosinverfobia.com]
+
+# Integraciones
+
+Se está usando una integración con Hubspot a través de un API que proporsiona el equipo de Hubspot con el fin de realizar conexión del formulario de registro de datos y la encuesta, con la lista general de contactos de la cuenta de Finamex en Hubspot. Lo anterior para que todos los registros lleguen de inmediato al la base de contactos.
+
+la API que se estpa usando es basada en la siguiente documentación:
+[https://developers.hubspot.com/docs/api/crm/contacts]
+
+# Backend Inverfobia
+
+La landing usa un servicio backend el cual está desarrollado en Node con el fin de canalizr los endpoints de HUbspot y Google recaptcha. La documentación la comparto a continuación:
+
+[https://documenter.getpostman.com/view/11244183/2s93JnTRNP]
