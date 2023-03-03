@@ -83,7 +83,7 @@ export const Responses: FC = () => {
             "Deposita fácil tus ahorros, selecciona el plazo y verás qué ganancia obtienes de esa inversión. Sin miedo, sin complicaciones."
           }
           link={
-            "https://www.finamex.com.mx/general/mas-pesos?utm_source=landing-page&utm_id=inverfobia"
+            "https://www.finamex.com.mx/general/mas-pesos?utm_source=landing&utm_medium=inverfobiaV1&utm_campaign=resultado-pesos"
           }
         >
           <Pesos color={"#F9A826"} />
@@ -98,7 +98,7 @@ export const Responses: FC = () => {
             "¡Elige tu estrategia y ve lo fácil que crece tu dinero! Cada fondo tiene un mix de valores para comprar o vender como cualquier acción e invertir seguro."
           }
           link={
-            "https://www.finamex.com.mx/general/fondos?utm_source=landing-page&utm_id=inverfobia"
+            "https://www.finamex.com.mx/general/fondos?utm_source=landing&utm_medium=inverfobiaV1&utm_campaign=resultado-fondos"
           }
         >
           <Fondos color={"#A2E68A"} />
@@ -113,7 +113,7 @@ export const Responses: FC = () => {
             "Compra y vende tus acciones favoritas a nivel mundial y nosotros te ayudamos a obtener el mejor rendimiento. ¿Cuál inverfobia?"
           }
           link={
-            "https://www.finamex.com.mx/general/finamex-trading/?utm_source=landing-page&utm_id=inverfobia"
+            "https://www.finamex.com.mx/general/finamex-trading/?utm_source=landing&utm_medium=inverfobiaV1&utm_campaign=resultado-trading"
           }
         >
           <Trading color={"#46D7FB"} />
@@ -128,7 +128,7 @@ export const Responses: FC = () => {
             "Arma tu estrategia con nuestros expertos llevando tu rendimiento a lo más alto, y hazte inmune a la Inverfobia protegiendo tus activos en México y el mundo."
           }
           link={
-            "https://www.finamex.com.mx/inversiones/estrategia-patrimonial/?utm_source=landing-page&utm_id=inverfobia"
+            "https://www.finamex.com.mx/inversiones/estrategia-patrimonial/?utm_source=landing&utm_medium=inverfobiaV1&utm_campaign=resultado-patrimonio"
           }
         >
           <Home color={"#8FA4E3"} />
